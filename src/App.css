@@ -115,6 +115,15 @@
   align-items: center;
 }
 
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  margin-right: 0; /* Remove margin between circle containers */
+}
+
+
 .circle {
   width: 75px;
   height: 75px;
@@ -155,20 +164,55 @@
   color: #000;
 }
 
-/* App.css */
+
 .mobile-only-button {
-  display: none; /* Hide by default */
-  background-color: #00ADB5; /* Set button color */
-  color: #fff; /* Set text color to white for contrast */
-  border: none; /* Remove border */
-  padding: 10px 20px; /* Add some padding */
-  border-radius: 5px; /* Optional: round the corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
+  display: none; 
+  background-color: #00ADB5; 
+  color: #fff; 
+  border: none;
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer; 
 }
+
 
 @media (max-width: 768px) {
   .mobile-only-button {
-    display: block; /* Show only on screens smaller than 768px */
-    margin-top: 10px; /* Add space above the button */
+    display: block;
+    margin-top: 10px;
+  }
+
+
+  .stack-item {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+  }
+
+  .stack-title, .circle-text, .circle {
+    font-size: 14px; 
+  }
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #393E46;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .green-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
   }
 }
