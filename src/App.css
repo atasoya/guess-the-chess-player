@@ -154,3 +154,21 @@
 .card-content {
   color: #000;
 }
+
+/* App.css */
+.mobile-only-button {
+  display: none; /* Hide by default */
+  background-color: #00ADB5; /* Set button color */
+  color: #fff; /* Set text color to white for contrast */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add some padding */
+  border-radius: 5px; /* Optional: round the corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+@media (max-width: 768px) {
+  .mobile-only-button {
+    display: block; /* Show only on screens smaller than 768px */
+    margin-top: 10px; /* Add space above the button */
+  }
+}
