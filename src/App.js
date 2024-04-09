@@ -157,7 +157,7 @@ function App() {
                 <div className="circles-container">
                   <div className="circle-container">
                     <div className="circle-text">
-                      Peak Elo
+                      Elo
                       {randomPlayer && player.elo > randomPlayer.elo ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : player.elo < randomPlayer.elo ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
                     </div>
                     <div
