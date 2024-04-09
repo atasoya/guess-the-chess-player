@@ -61,7 +61,7 @@ function App() {
       }else{
         setIsWinner(false)
       }
-      setSelectedPlayerNames(prevNames => [...prevNames, selectedPlayer]);
+      setSelectedPlayerNames(prevNames =>[selectedPlayer, ...prevNames]);
       setSelectedPlayer(null);
       setBlurLevel(prevLevel => Math.max(prevLevel - 5, 0));
     }
@@ -72,11 +72,11 @@ function App() {
       <div className="bg-custom-black h-20 w-screen flex justify-center items-center">
         <p className="text-custom-white font-bold text-lg">Guess The Chess Player</p>
       </div>
-      <div className="coffee-image-container absolute" style={{ right: '2%', top: '10%' }}>
-        <a href="https://www.buymeacoffee.com/atasoyata" target="_blank">
-          <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: '40px', width: '145px' }} />
-        </a>
-      </div>
+      <div className="coffee-image-container" style={{ position: 'relative', textAlign: 'center', marginTop: '20px',marginLeft: '20px' }}>
+      <a href="https://www.buymeacoffee.com/atasoyata" target="_blank">
+        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: '40px', width: '145px' }} />
+      </a>
+    </div>
 
       {isWinner && (
         <div className="modal">
