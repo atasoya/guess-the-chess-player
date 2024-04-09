@@ -16,7 +16,7 @@
     "imageUrl": "players/Magnus-Carlsen.jpeg"
   },
   {
-    "label": "Iluan Baltag",
+    "label": "Iulian Baltag",
     "born": 1986,
     "elo": 2410,
     "nationality": "MDA",
@@ -48,7 +48,7 @@
     "imageUrl": "players/Nodirbek-Abdusattorov.jpeg"
   },
 {
-    "label": "Liren Ding",
+    "label": "Ding Liren",
     "born": 1990,
     "elo": 2803,
     "nationality": "CHN",
@@ -510,5 +510,317 @@
     "nationality": "TUR",
     "title": "None",
     "imageUrl": "players/Tugberk-Bardak.jpg"
-  }
+  },
+  {
+    "label": "Mustafa Yılmaz",
+    "born":1992,
+    "elo": 2641,
+    "nationality": "TUR",
+    "title": "GM",
+    "imageUrl": "players/Mustafa-Yılmaz.jpeg"
+  },
+  {
+    "label": "Awonder Liang",
+    "born":2003,
+    "elo": 2642,
+    "nationality": "USA",
+    "title": "GM",
+    "imageUrl": "players/Awonder-Liang.jpeg"
+  },
+  {
+    "label": "Tamir Nabaty",
+    "born":1991,
+    "elo": 2643,
+    "nationality": "ISR",
+    "title": "GM",
+    "imageUrl": "players/Tamir-Nabaty.jpeg"
+  },
+  {
+    "label": "Thai Dai Van Nguyen",
+    "born":2001,
+    "elo": 2643,  
+    "nationality": "CZE",
+    "title": "GM",
+    "imageUrl": "players/Tai-Nguyen.jpeg"
+  },
+  {
+    "label": "Ante Brkic",
+    "born":1988,
+    "elo": 2643,  
+    "nationality": "CRO",
+    "title": "GM",
+    "imageUrl": "players/Tai-Nguyen.jpeg"
+  },
+  {
+    "label": "Ante Brkic",
+    "born":1988,
+    "elo": 2643,  
+    "nationality": "CRO",
+    "title": "GM",
+    "imageUrl": "players/Ante-Brick.jpeg"
+  },
+  {
+    "label": "Alan Pichot",
+    "born":1998,
+    "elo": 2644,  
+    "nationality": "ESP",
+    "title": "GM",
+    "imageUrl": "players/Alan-Picot.jpeg"
+  },
+  {
+    "label": "Samvel Ter-Sahakyan",
+    "born":1993,
+    "elo": 2644,  
+    "nationality": "ARM",
+    "title": "GM",
+    "imageUrl": "players/Samvel-Ter.jpeg"
+  },
+  {
+    "label": "Jeffery Xiong",
+    "born":2000,
+    "elo": 2646,  
+    "nationality": "USA",
+    "title": "GM",
+    "imageUrl": "players/Xiong-Jeffery.jpeg"
+  },
+  {
+    "label": "Ruslan Ponomariov",
+    "born":1983,
+    "elo": 2646,  
+    "nationality": "UKR",
+    "title": "GM",
+    "imageUrl": "players/Ruslan-Ponomarinov.jpeg"
+  },
+  {
+    "label": "Mateusz Bartel",
+    "born":1985,
+    "elo": 2647,  
+    "nationality": "POL",
+    "title": "GM",
+    "imageUrl": "players/Bartel.jpeg"
+  },
+  {
+    "label": "Mamedov Rauf",
+    "born":1988,
+    "elo": 2651,  
+    "nationality": "AZE",
+    "title": "GM",
+    "imageUrl": "players/Rauf-Mamedov.jpeg"
+  },
+  {
+    "label": "Chao b Li",
+    "born":1989,
+    "elo": 2651,  
+    "nationality": "AZE",
+    "title": "GM",
+    "imageUrl": "players/Chao-Li.jpeg"
+  },
+  {
+    "label": "Anton Korobov",
+    "born":1985,
+    "elo": 2651,  
+    "nationality": "UKR",
+    "title": "GM",
+    "imageUrl": "players/Anton-Korobov.jpeg"
+  },
+  {
+    "label": "Yue Wang",
+    "born":1987,
+    "elo": 2654,  
+    "nationality": "CHN",
+    "title": "GM",
+    "imageUrl": "players/Yue-Wang.jpeg"
+  },
+  {
+    "label": "Raunak Sadhwani",
+    "born":2005,
+    "elo": 2654,  
+    "nationality": "IND",
+    "title": "GM",
+    "imageUrl": "players/Raunak.jpeg"
+  },
+  {
+    "label": "Yuriy Kryvoruchko",
+    "born":1986,
+    "elo": 2654,  
+    "nationality": "UKR",
+    "title": "GM",
+    "imageUrl": "players/Yuriy-Kryvoruchko.jpeg"
+  },
+  {
+    "label": "Kirill Alekseenko",
+    "born":1997,
+    "elo": 2655,  
+    "nationality": "AUT",
+    "title": "GM",
+    "imageUrl": "players/Kirill-Alekseenko.jpeg"
+  },
+  {
+    "label": "Francisco Vallejo Pons",
+    "born":1982,
+    "elo": 2657,  
+    "nationality": "ESP",
+    "title": "GM",
+    "imageUrl": "players/Francisco-Pons.jpeg"
+  },
+  {
+    "label": "Ernesto Inarkiev",
+    "born":1985,
+    "elo": 2658,  
+    "nationality": "FID",
+    "title": "GM",
+    "imageUrl": "players/Ernesto-Inarkiev.jpeg"
+  },
+  {
+    "label": "Arkadij Naiditsch",
+    "born":1985,
+    "elo": 2661,  
+    "nationality": "AZE",
+    "title": "GM",
+    "imageUrl": "players/Naiditsch.jpeg"
+  },
+  {
+    "label": "Alexei Shirov",
+    "born":1972,
+    "elo": 2661,  
+    "nationality": "ESP",
+    "title": "GM",
+    "imageUrl": "players/Alexei-Shirov.jpeg"
+  },
+  {
+    "label": "Maxim Matlakov",
+    "born":1991,
+    "elo": 2662,  
+    "nationality": "RUS",
+    "title": "GM",
+    "imageUrl": "players/Maxim-Matlakov.jpeg"
+  },
+  {
+    "label": "Nils Grandelius",
+    "born":1993,
+    "elo": 2664,  
+    "nationality": "SWE",
+    "title": "GM",
+    "imageUrl": "players/Nils.jpeg"
+  },
+  {
+    "label": "Nodirbek Yakubboev",
+    "born":2002,
+    "elo": 2665,  
+    "nationality": "UZB",
+    "title": "GM",
+    "imageUrl": "players/Nodirbek-Yakkuboyev.jpeg"
+  },
+  {
+    "label": "Peter Leko",
+    "born":1979,
+    "elo": 2666,  
+    "nationality": "HUN",
+    "title": "GM",
+    "imageUrl": "players/Peter-Leko.jpeg"
+  },
+  {
+    "label": "Jorden Van Foreest",
+    "born":1999,
+    "elo": 2668,  
+    "nationality": "NED",
+    "title": "GM",
+    "imageUrl": "players/jorden-Van.jpeg"
+  },
+  {
+    "label": "Ivan Saric",
+    "born":1990,
+    "elo": 2670,  
+    "nationality": "CRO",
+    "title": "GM",
+    "imageUrl": "players/Ivan-Saric.jpeg"
+  },
+  {
+    "label": "Grigoriy Oparin",
+    "born":1997,
+    "elo": 2670,  
+    "nationality": "USA",
+    "title": "GM",
+    "imageUrl": "players/Grigoriy-Oparin.jpeg"
+  },
+  {
+    "label": "Radoslaw Wojtaszek",
+    "born":1987,
+    "elo": 2671,  
+    "nationality": "POL",
+    "title": "GM",
+    "imageUrl": "players/Radoslaw.jpeg"
+  },
+  {
+    "label": "Grabriel Sargissian",
+    "born":1983,
+    "elo": 2671,  
+    "nationality": "ARM",
+    "title": "GM",
+    "imageUrl": "players/Grabriel-Sargissian.jpeg"
+  },
+  {
+    "label": "Sam Shankland",
+    "born":1991,
+    "elo": 2671,  
+    "nationality": "ARM",
+    "title": "GM",
+    "imageUrl": "players/Sam-Shankland.jpeg"
+  },
+  {
+    "label": "David Anton Guijarro",
+    "born":1995,
+    "elo": 2673,  
+    "nationality": "ESP",
+    "title": "GM",
+    "imageUrl": "players/David-AntonGuijarro.jpeg"
+  },
+  {
+    "label": "Michael Adams",
+    "born":1971,
+    "elo": 2673,  
+    "nationality": "ENG",
+    "title": "GM",
+    "imageUrl": "players/Michael-Adams.jpeg"
+  },
+  {
+    "label": "Alexandr Predke",
+    "born":1994,
+    "elo": 2673,  
+    "nationality": "SRB",
+    "title": "GM",
+    "imageUrl": "players/Alexandr-Predke.jpeg"
+  },
+  {
+    "label": "Andrei Volokitin",
+    "born":1986,
+    "elo": 2674,  
+    "nationality": "UKR",
+    "title": "GM",
+    "imageUrl": "players/Andrei-Volitkin.jpeg"
+  },
+  {
+    "label": "David Howell",
+    "born":1990,
+    "elo": 2675,  
+    "nationality": "ENG",
+    "title": "GM",
+    "imageUrl": "players/David-Howell.jpeg"
+  },
+  {
+    "label": "Kirill Shevchenko",
+    "born":2002,
+    "elo": 2675,  
+    "nationality": "ROU",
+    "title": "GM",
+    "imageUrl": "players/Shevchenko-Kirill.jpeg"
+  },
+  
+  
+  
+
+
+
+
+
 ]
