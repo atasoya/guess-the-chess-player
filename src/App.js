@@ -164,25 +164,53 @@ function App() {
                       Peak Elo
                       {randomPlayer && player.elo > randomPlayer.elo ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : player.elo < randomPlayer.elo ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
                     </div>
-                    <div className="circle">{player.elo}</div>
+                    <div
+                    className="circle"
+                    style={{
+                      backgroundColor: player.elo === randomPlayer.elo ? 'green' : '#393E46',
+                    }}
+                  >
+                    {player.born}
+                  </div>
                   </div>
                   <div className="circle-container">
                     <div className="circle-text">Nationality</div>
-                    <div className="circle">{player.nationality}</div>
+                    <div
+                    className="circle"
+                    style={{
+                      backgroundColor: player.nationality === randomPlayer.nationality ? 'green' : '#393E46',
+                    }}
+                  >
+                    {player.nationality}
+                  </div>
                   </div>
                   <div className="circle-container">
                     <div className="circle-text">
                       Born Year
                       {randomPlayer && player.born > randomPlayer.born ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : player.born < randomPlayer.born ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
                     </div>
-                    <div className="circle">{player.born}</div>
+                    <div
+                    className="circle"
+                    style={{
+                      backgroundColor: player.born === randomPlayer.born ? 'green' : '#393E46',
+                    }}
+                  >
+                    {player.born}
+                  </div>
                   </div>
                   <div className="circle-container">
                     <div className="circle-text">
                       Title
                       {randomPlayer && getTitleHierarchyValue(player.title) > getTitleHierarchyValue(randomPlayer.title) ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : getTitleHierarchyValue(player.title) < getTitleHierarchyValue(randomPlayer.title) ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
                     </div>
-                    <div className="circle">{player.title}</div>
+                    <div
+                    className="circle"
+                    style={{
+                      backgroundColor: player.title === randomPlayer.title ? 'green' : '#393E46',
+                    }}
+                  >
+                    {player.title}
+                  </div>
                   </div>
                 </div>
               </div>
