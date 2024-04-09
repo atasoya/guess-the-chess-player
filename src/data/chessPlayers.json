@@ -477,6 +477,38 @@
     "elo": 2382,
     "nationality": "TUR",
     "title": "FM",
-    "imageUrl": "players/Yamac-Samani.jpeg"
+    "imageUrl": "players/Yamac-Samani.jpg"
+  },
+  {
+    "label": "Ataberk Eren",
+    "born": 1999,
+    "elo": 2416,
+    "nationality": "TUR",
+    "title": "IM",
+    "imageUrl": "players/Ataberk-Eren.jpeg"
+  },
+  {
+    "label": "Huseyin Sertbay",
+    "born": 1985,
+    "elo": 2005,
+    "nationality": "TUR",
+    "title": "None",
+    "imageUrl": "players/Huseyin-Sertbay.jpeg"
+  },
+  {
+    "label": "Ata Atasoy",
+    "born":2003,
+    "elo": 1912,
+    "nationality": "TUR",
+    "title": "None",
+    "imageUrl": "players/Ata-Atasoy.jpeg"
+  },
+  {
+    "label": "Tugberk Bardak",
+    "born":2006,
+    "elo": 1789,
+    "nationality": "TUR",
+    "title": "None",
+    "imageUrl": "players/Tugberk-Bardak.jpg"
   }
 ]
