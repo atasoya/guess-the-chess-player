@@ -112,6 +112,14 @@
     "title": "GM",
     "imageUrl": "players/Sergey-Karjakin.jpeg"
   },
+    {
+    "label": "Leiner Dominguez Perez",
+    "born": 1983,
+    "elo": 2748,
+    "nationality": "USA",
+    "title": "GM",
+    "imageUrl": "players/Leiner-Dominguez-Perez.jpeg"
+  },
   {
     "label": "R Praggnanandhaa",
     "born": 2005,
@@ -120,14 +128,7 @@
     "title": "GM",
     "imageUrl": "players/R-Praggnanandhaa.jpeg"
   },
-  {
-    "label": "Leiner Dominguez Perez",
-    "born": 1983,
-    "elo": 2748,
-    "nationality": "USA",
-    "title": "GM",
-    "imageUrl": "players/Leiner-Dominguez-Perez.jpeg"
-  },
+
   {
     "label": "Anish Giri",
     "born": 1994,
@@ -414,7 +415,47 @@
     "elo": 2684,
     "nationality": "UZB",
     "title": "GM",
-    "imageUrl": "players/Xiangzhi-Bu.jpeg"
+    "imageUrl": "players/Javokhir-Sindarov.jpeg"
+  },
+  {
+    "label": "Evgeny Tomashevsky",
+    "born": 1987,
+    "elo": 2681,
+    "nationality": "RUS",
+    "title": "GM",
+    "imageUrl": "players/Evgeny-Tomashevsky.jpeg"
+  },
+  {
+    "label": "David Navara",
+    "born": 1985,
+    "elo": 2678,
+    "nationality": "CZE",
+    "title": "GM",
+    "imageUrl": "players/David-Navara.jpeg"
+  },
+  {
+    "label": "Bassem Amin",
+    "born": 1988,
+    "elo": 2678,
+    "nationality": "EGY",
+    "title": "GM",
+    "imageUrl": "players/Bassem-Amin.jpeg"
+  },
+  {
+    "label": "Haik M. Martirosyan",
+    "born": 2000,
+    "elo": 2678,
+    "nationality": "ARM",
+    "title": "GM",
+    "imageUrl": "players/Haik-M.-Martirosyan.jpeg"
+  },
+  {
+    "label": "Hans Moke Niemann",
+    "born": 2003,
+    "elo": 2676,
+    "nationality": "USA",
+    "title": "GM",
+    "imageUrl": "players/Hans-Moke-Niemann.jpeg"
   },
 
 
