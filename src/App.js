@@ -1,4 +1,3 @@
-// App.js
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -35,6 +34,8 @@ function App() {
   const [isWinner, setIsWinner] = useState(false);
   const [selectedPlayerNames, setSelectedPlayerNames] = useState([]);
   const [blurLevel, setBlurLevel] = useState(30);
+  const [guessMade, setGuessMade] = useState(false); // State to track if a guess has been made
+  const [dontAnimate, setDontAnimate] = useState(false); // State to track if a guess has been made
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -50,6 +51,8 @@ function App() {
 
   const handleAutocompleteChange = (event, newValue) => {
     setSelectedPlayer(newValue);
+    setDontAnimate(true);
+
   };
 
   const handlePlayAgain = () => {
@@ -62,6 +65,7 @@ function App() {
   };
 
   const handleGuess = () => {
+    setDontAnimate(false);
     if (selectedPlayer) {
       if(selectedPlayer === randomPlayer){
         setBlurLevel(0);
@@ -72,6 +76,7 @@ function App() {
       setSelectedPlayerNames(prevNames => [selectedPlayer, ...prevNames]);
       setSelectedPlayer(null);
       setBlurLevel(prevLevel => Math.max(prevLevel - 5, 0));
+      setGuessMade(true); // Set guessMade to true when a guess is made
     }
   };
 
@@ -151,7 +156,7 @@ function App() {
         <div className="mt-4 px-5">
           <div className="stack">
             {selectedPlayerNames.map((player, index) => (
-              <div key={index} className="stack-item">
+              <div key={`${player.label}-${index}-${Math.random()}`} className={`stack-item ${index === 0 && guessMade && !dontAnimate ? 'animate-in' : ''}`}>
                 <h3 className="stack-title">{player.label}</h3>
                 <div className="circles-container">
                   <div className="circle-container">
