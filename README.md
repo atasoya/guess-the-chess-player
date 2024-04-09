@@ -24,7 +24,7 @@ Once you've made your changes, please submit a pull request. All pull requests a
 
 ## Installation
 
-## Prerequisites
+### Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
@@ -32,7 +32,7 @@ Before you begin, ensure you have the following installed on your system:
 
 - Git: Git is a version control system that allows you to download this project's source code. You can download it from the [official Git website](https://git-scm.com/).
 
-## Installation
+### Installation
 
 1. Clone the repository to your local machine using Git. Open a terminal and run the following command:
 ```bash
@@ -53,4 +53,10 @@ npm start
 
 ## Preview
 
-Instructions on how to use your project and any relevant examples.
+![Screen Shot1](/public/assets/ss1.png)
+![Screen Shot2](/public/assets/ss2.png)
+
+## Acknowledgments
+
+A huge thank you to all contributors and players who have made this project possible. Your support and feedback have been invaluable.
+
