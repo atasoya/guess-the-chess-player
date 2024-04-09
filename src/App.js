@@ -166,7 +166,7 @@ function App() {
                       backgroundColor: player.elo === randomPlayer.elo ? 'green' : '#393E46',
                     }}
                   >
-                    {player.born}
+                    {player.elo}
                   </div>
                   </div>
                   <div className="circle-container">
