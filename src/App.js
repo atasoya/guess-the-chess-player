@@ -4,12 +4,8 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import chessPlayers from './data/chessPlayers.json'; 
 
-const chessPlayers = [
-  { label: 'Ediz Gürel', born: 2008, elo: 2540, nationality: "TUR", title: "GM", imageUrl: "Ediz-Gürel.jpeg" },
-  { label: 'Magnus Carlsen', born: 1990, elo: 2830, nationality: "NOR", title: "GM", imageUrl: "Magnus-Carlsen.jpeg" },
-  { label: 'Iluan Baltag', born: 1986, elo: 2410, nationality: "MDA", title: "IM", imageUrl: "Iluan-Baltag.jpeg" },
-];
 
 const arrowColor = '#00ADB5';
 

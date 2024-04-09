@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Ediz Gürel",
+    "born": 2008,
+    "elo": 2540,
+    "nationality": "TUR",
+    "title": "GM",
+    "imageUrl": "players/Ediz-Gürel.jpeg"
+  },
+  {
+    "label": "Magnus Carlsen",
+    "born": 1990,
+    "elo": 2830,
+    "nationality": "NOR",
+    "title": "GM",
+    "imageUrl": "players/Magnus-Carlsen.jpeg"
+  },
+  {
+    "label": "Iluan Baltag",
+    "born": 1986,
+    "elo": 2410,
+    "nationality": "MDA",
+    "title": "IM",
+    "imageUrl": "players/Iluan-Baltag.jpeg"
+  }
+]
