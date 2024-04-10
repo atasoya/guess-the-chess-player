@@ -4,8 +4,9 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import chessPlayers from './data/chessPlayers.json'; 
-
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import chessPlayers from './data/chessPlayers.json';
 
 const arrowColor = '#00ADB5';
 
@@ -31,8 +32,9 @@ function App() {
   const [isWinner, setIsWinner] = useState(false);
   const [selectedPlayerNames, setSelectedPlayerNames] = useState([]);
   const [blurLevel, setBlurLevel] = useState(30);
-  const [guessMade, setGuessMade] = useState(false); // State to track if a guess has been made
-  const [dontAnimate, setDontAnimate] = useState(false); // State to track if a guess has been made
+  const [guessMade, setGuessMade] = useState(false);
+  const [dontAnimate, setDontAnimate] = useState(false);
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false); // State to manage modal visibility
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -49,7 +51,6 @@ function App() {
   const handleAutocompleteChange = (event, newValue) => {
     setSelectedPlayer(newValue);
     setDontAnimate(true);
-
   };
 
   const handlePlayAgain = () => {
@@ -65,20 +66,20 @@ function App() {
   const handleGuess = () => {
     setDontAnimate(false);
     if (selectedPlayer) {
-      if(selectedPlayer === randomPlayer){
+      if (selectedPlayer === randomPlayer) {
         setBlurLevel(0);
         setIsWinner(true);
         setFoundCountry(true);
-      }else{
+      } else {
         setIsWinner(false);
       }
-      if (randomPlayer.nationality === selectedPlayer.nationality){
+      if (randomPlayer.nationality === selectedPlayer.nationality) {
         setFoundCountry(true);
       }
       setSelectedPlayerNames(prevNames => [selectedPlayer, ...prevNames]);
       setSelectedPlayer(null);
       setBlurLevel(prevLevel => Math.max(prevLevel - 5, 0));
-      setGuessMade(true); // Set guessMade to true when a guess is made
+      setGuessMade(true);
     }
   };
 
@@ -88,17 +89,44 @@ function App() {
     }
   };
 
+  const openHelpModal = () => {
+    setIsHelpModalOpen(true);
+  };
+
+  const closeHelpModal = () => {
+    setIsHelpModalOpen(false);
+  };
+
   return (
     <div className="App">
-      <div className="bg-custom-black h-20 w-screen flex justify-center items-center">
-        <p className="text-custom-white font-bold text-lg">Guess The Chess Player</p>
+      <div className="bg-custom-black h-20 w-screen flex justify-between items-center">
+        <p className="text-custom-white font-bold text-lg mx-auto">Guess The Chess Player</p>
+        <div>
+          <HelpOutlineIcon style={{ color: 'grey', fontSize: '24px', cursor: 'pointer', marginRight: '20px' }} onClick={openHelpModal} />
+        </div>
       </div>
-      <div className="coffee-image-container" style={{ position: 'relative', textAlign: 'center', marginTop: '20px',"marginLeft":"20px" }}>
-      <a href="https://www.buymeacoffee.com/atasoyata" target="_blank">
-        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: '40px', width: '145px' }} />
-      </a>
-    </div>
+      {isHelpModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <p><strong>Welcome to "Guess The Chess Player"!</strong></p>
+            <ul>
+              <li>This interactive game challenges you to guess the identity of a chess player based on various clues provided.</li>
+              <li>The game randomly selects a chess player from the April 2024 rating list provided by FIDE, the international chess federation. (Top 100 open & woman)</li>
+              <li>Your task is to analyze the clues given, including the player's photo, Elo rating, nationality, birth year, and title, and make an educated guess about the identity of the chess player.</li>
+              <li>Have fun guessing and testing your knowledge of the chess world!</li>
+              <li><a href="https://github.com/atasoya/guess-the-chess-player" target="_blank"><GitHubIcon /></a></li>
+            </ul>
+            
+            <button onClick={closeHelpModal} style={{marginTop:"20px"}}>Close</button>
+          </div>
+        </div>
 
+      )}
+      <div className="coffee-image-container" style={{ position: 'relative', textAlign: 'center', marginTop: '20px', "marginLeft": "20px" }}>
+        <a href="https://www.buymeacoffee.com/atasoyata" target="_blank">
+          <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: '40px', width: '145px' }} />
+        </a>
+      </div>
       {isWinner && (
         <div className="modal">
           <div className="modal-content">
@@ -107,10 +135,9 @@ function App() {
           </div>
         </div>
       )}
-
-      <div className="flex justify-center mt-10"style={{ "marginTop":"10px" }}>
+      <div className="flex justify-center mt-10" style={{ "marginTop": "10px" }}>
         <div className="flex flex-col items-center bg-custom-white shadow-lg rounded-lg p-5" >
-        <div className="bg-custom-grey h-64 w-64 mb-4 flex items-center justify-center relative">
+          <div className="bg-custom-grey h-64 w-64 mb-4 flex items-center justify-center relative">
             <img
               src={randomPlayer.imageUrl || ''}
               alt={randomPlayer.label || 'Chess Player'}
@@ -137,18 +164,15 @@ function App() {
                 onKeyDown={handleKeyDown}
                 sx={{
                   '& .MuiOutlinedInput-root': {
-                    // Targeting the outline color on focus
                     '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                      borderColor: "#00ADB5", // Replace 'yourDesiredColor' with your choice of color
+                      borderColor: "#00ADB5",
                     },
                   },
                   '& .MuiInputLabel-outlined': {
-                    // Label color on focus
                     '&.Mui-focused': {
-                      color: "black", // Replace with your choice of label color
+                      color: "black",
                     },
                   },
-          
                 }}
               />
             )}
@@ -158,7 +182,7 @@ function App() {
           {windowWidth <= 768 && (
             <button
               className="mobile-only-button"
-              onClick={handleGuess} // Use handleGuess for button click
+              onClick={handleGuess}
               style={{
                 display: 'block',
                 marginTop: '10px',
@@ -175,7 +199,6 @@ function App() {
           )}
         </div>
       </div>
-
       {selectedPlayerNames.length > 0 && (
         <div className="mt-4 px-5">
           <div className="stack">
@@ -189,24 +212,24 @@ function App() {
                       {randomPlayer && player.elo > randomPlayer.elo ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : player.elo < randomPlayer.elo ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
                     </div>
                     <div
-                    className="circle"
-                    style={{
-                      backgroundColor: player.elo === randomPlayer.elo ? 'green' : '#393E46',
-                    }}
-                  >
-                    {player.elo}
-                  </div>
+                      className="circle"
+                      style={{
+                        backgroundColor: player.elo === randomPlayer.elo ? 'green' : '#393E46',
+                      }}
+                    >
+                      {player.elo}
+                    </div>
                   </div>
                   <div className="circle-container">
                     <div className="circle-text">Nationality</div>
                     <div
-                    className="circle"
-                    style={{
-                      backgroundColor: player.nationality === randomPlayer.nationality ? 'green' : '#393E46',
-                    }}
-                  >
-                    {player.nationality}
-                  </div>
+                      className="circle"
+                      style={{
+                        backgroundColor: player.nationality === randomPlayer.nationality ? 'green' : '#393E46',
+                      }}
+                    >
+                      {player.nationality}
+                    </div>
                   </div>
                   <div className="circle-container">
                     <div className="circle-text">
@@ -214,13 +237,13 @@ function App() {
                       {randomPlayer && player.born > randomPlayer.born ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : player.born < randomPlayer.born ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
                     </div>
                     <div
-                    className="circle"
-                    style={{
-                      backgroundColor: player.born === randomPlayer.born ? 'green' : '#393E46',
-                    }}
-                  >
-                    {player.born}
-                  </div>
+                      className="circle"
+                      style={{
+                        backgroundColor: player.born === randomPlayer.born ? 'green' : '#393E46',
+                      }}
+                    >
+                      {player.born}
+                    </div>
                   </div>
                   <div className="circle-container">
                     <div className="circle-text">
@@ -228,20 +251,17 @@ function App() {
                       {randomPlayer && getTitleHierarchyValue(player.title) > getTitleHierarchyValue(randomPlayer.title) ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : getTitleHierarchyValue(player.title) < getTitleHierarchyValue(randomPlayer.title) ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
                     </div>
                     <div
-                    className="circle"
-                    style={{
-                      backgroundColor: player.title === randomPlayer.title ? 'green' : '#393E46',
-                    }}
-                  >
-                    {player.title}
-                  </div>
-                  
+                      className="circle"
+                      style={{
+                        backgroundColor: player.title === randomPlayer.title ? 'green' : '#393E46',
+                      }}
+                    >
+                      {player.title}
+                    </div>
                   </div>
                 </div>
               </div>
-              
             ))}
-            
           </div>
         </div>
       )}
