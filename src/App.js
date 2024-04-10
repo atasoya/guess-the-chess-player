@@ -25,6 +25,7 @@ const getTitleHierarchyValue = (title) => titleHierarchy[title] || 0;
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [foundCountry, setFoundCountry] = useState(false);
   const [randomPlayer, setRandomPlayer] = useState({});
   const [selectedPlayer, setSelectedPlayer] = useState(null);
   const [isWinner, setIsWinner] = useState(false);
@@ -58,6 +59,7 @@ function App() {
     setRandomPlayer(selectedRandomPlayer);
     setSelectedPlayerNames([]);
     setBlurLevel(30);
+    setFoundCountry(false);
   };
 
   const handleGuess = () => {
@@ -66,8 +68,12 @@ function App() {
       if(selectedPlayer === randomPlayer){
         setBlurLevel(0);
         setIsWinner(true);
+        setFoundCountry(true);
       }else{
         setIsWinner(false);
+      }
+      if (randomPlayer.nationality === selectedPlayer.nationality){
+        setFoundCountry(true);
       }
       setSelectedPlayerNames(prevNames => [selectedPlayer, ...prevNames]);
       setSelectedPlayer(null);
@@ -104,13 +110,20 @@ function App() {
 
       <div className="flex justify-center mt-10"style={{ "marginTop":"10px" }}>
         <div className="flex flex-col items-center bg-custom-white shadow-lg rounded-lg p-5" >
-          <div className="bg-custom-grey h-64 w-64 mb-4 flex items-center justify-center relative">
+        <div className="bg-custom-grey h-64 w-64 mb-4 flex items-center justify-center relative">
             <img
               src={randomPlayer.imageUrl || ''}
               alt={randomPlayer.label || 'Chess Player'}
               className="absolute h-full w-full object-cover rounded-lg"
               style={{ filter: `blur(${blurLevel}px)` }}
             />
+            {foundCountry && randomPlayer.nationality !== "FIDE" && (
+              <img
+                src={`https://ratings.fide.com/svg/${randomPlayer.nationality}.svg`}
+                alt="Found Country"
+                className="absolute bottom-0 right-0 h-9 w-12"
+              />
+            )}
           </div>
           <Autocomplete
             disablePortal
@@ -122,6 +135,21 @@ function App() {
                 {...params}
                 label="Guess The Chess Player"
                 onKeyDown={handleKeyDown}
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    // Targeting the outline color on focus
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                      borderColor: "#00ADB5", // Replace 'yourDesiredColor' with your choice of color
+                    },
+                  },
+                  '& .MuiInputLabel-outlined': {
+                    // Label color on focus
+                    '&.Mui-focused': {
+                      color: "black", // Replace with your choice of label color
+                    },
+                  },
+          
+                }}
               />
             )}
             onChange={handleAutocompleteChange}
@@ -207,10 +235,13 @@ function App() {
                   >
                     {player.title}
                   </div>
+                  
                   </div>
                 </div>
               </div>
+              
             ))}
+            
           </div>
         </div>
       )}
