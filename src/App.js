@@ -91,20 +91,23 @@ function App() {
 
   const openHelpModal = () => {
     setIsHelpModalOpen(true);
+    setDontAnimate(true)
   };
 
   const closeHelpModal = () => {
     setIsHelpModalOpen(false);
+    setDontAnimate(true)
   };
 
   return (
     <div className="App">
-      <div className="bg-custom-black h-20 w-screen flex justify-between items-center">
-        <p className="text-custom-white font-bold text-lg mx-auto">Guess The Chess Player</p>
-        <div>
-          <HelpOutlineIcon style={{ color: 'grey', fontSize: '24px', cursor: 'pointer', marginRight: '20px' }} onClick={openHelpModal} />
-        </div>
-      </div>
+<div className="bg-custom-black h-20 w-screen flex justify-between items-center relative">
+    <p className="text-custom-white font-bold text-lg mx-auto">Guess The Chess Player</p>
+    <div style={{ position: 'absolute', right: '20px', top: '50%', transform: 'translateY(-50%)' }}>
+        <HelpOutlineIcon style={{ color: 'grey', fontSize: '24px', cursor: 'pointer' }} onClick={openHelpModal} />
+    </div>
+</div>
+
       {isHelpModalOpen && (
         <div className="modal">
           <div className="modal-content">
@@ -138,12 +141,12 @@ function App() {
       <div className="flex justify-center mt-10" style={{ "marginTop": "10px" }}>
         <div className="flex flex-col items-center bg-custom-white shadow-lg rounded-lg p-5" >
           <div className="bg-custom-grey h-64 w-64 mb-4 flex items-center justify-center relative">
-            <img
-              src={randomPlayer.imageUrl || ''}
-              alt={randomPlayer.label || 'Chess Player'}
-              className="absolute h-full w-full object-cover rounded-lg"
-              style={{ filter: `blur(${blurLevel}px)` }}
-            />
+          <img
+          src={"/players/" + randomPlayer.ID + ".jpeg"}
+          alt={randomPlayer.label || 'Chess Player'}
+          className="absolute h-full w-full object-cover rounded-lg"
+          style={{ filter: `blur(${blurLevel}px)` }}
+      />
             {foundCountry && randomPlayer.nationality !== "FIDE" && (
               <img
                 src={`https://ratings.fide.com/svg/${randomPlayer.nationality}.svg`}
