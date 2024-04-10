@@ -182,7 +182,7 @@ function App() {
           <div className="bg-custom-grey h-64 w-64 mb-4 flex items-center justify-center relative">
             <img
               src={"/players/" + randomPlayer.ID + ".jpeg"}
-              alt={randomPlayer.label || 'Chess Player'}
+              alt={randomPlayer.ID || 'Chess Player'}
               className="absolute h-full w-full object-cover rounded-lg"
               style={{ filter: `blur(${blurLevel}px)` }}
             />
