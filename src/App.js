@@ -140,7 +140,7 @@ function App() {
       {isHelpModalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <p><strong>Welcome to "Guess The Chess Player"!</strong></p>
+            <p><strong><h1>Welcome to "Guess The Chess Player"!</h1></strong></p>
             <ul>
               <li style={{ marginBottom: "10px" }}>This interactive game challenges you to guess the identity of a chess player based on various clues provided.</li>
               <li style={{ marginBottom: "10px" }}>The game randomly selects a chess player from the April 2024 rating list provided by FIDE, the international chess federation. (Top 100 open & woman)</li>
