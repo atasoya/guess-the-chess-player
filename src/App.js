@@ -171,6 +171,16 @@ function App() {
       {isWinner && (
         <div className="modal">
           <div className="modal-content">
+          <p className='font-bold'>
+              {randomPlayer.label}
+          </p>
+          <div className='flex justify-center mb-4'>
+            <img
+              src={`/players/${randomPlayer.ID}.jpeg`}
+              alt={randomPlayer.name || 'Chess Player'}
+              style={{ height: '200px', width: '200px', objectFit: 'cover' }}
+            />
+        </div>
             <p>Congratulations! You've guessed correctly.</p>
             <button onClick={handlePlayAgain}>Play Again</button>
           </div>
