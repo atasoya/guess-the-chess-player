@@ -143,7 +143,7 @@ function App() {
             <p><strong><h1>Welcome to "Guess The Chess Player"!</h1></strong></p>
             <ul>
               <li style={{ marginBottom: "10px" }}>This interactive game challenges you to guess the identity of a chess player based on various clues provided.</li>
-              <li style={{ marginBottom: "10px" }}>The game randomly selects a chess player from the February 2025 rating list provided by FIDE, the international chess federation. (Top 100 open & woman)</li>
+              <li style={{ marginBottom: "10px" }}>The game randomly selects a chess player from the March 2025 rating list provided by FIDE, the international chess federation. (Top 100 open & woman)</li>
               <li style={{ marginBottom: "10px" }}>Your task is to analyze the clues given, including the player's photo, Elo rating, nationality, birth year, and title, and make an educated guess about the identity of the chess player.</li>
               <li style={{ marginBottom: "10px" }}>Have fun guessing and testing your knowledge of the chess world!</li>
               <li><a href="https://github.com/atasoya/guess-the-chess-player" target="_blank"><GitHubIcon /></a></li>
