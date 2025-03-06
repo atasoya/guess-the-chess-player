@@ -451,24 +451,27 @@ export default function ChessPlayerGame() {
                 <h3 className="stack-title">{player.label}</h3>
                 <div className="circles-container">
                   <div className="circle-container">
-                    <div className="circle-text">
-                      Elo
-                      {randomPlayer && player.elo > randomPlayer.elo ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : player.elo < randomPlayer.elo ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
-                    </div>
+                    <div className="circle-text">Elo</div>
                     <div
                       className="circle"
                       style={{
                         backgroundColor: player.elo === randomPlayer.elo ? 'green' : '#393E46',
                         border: '8px solid #222831',
                         display: 'flex',
+                        flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
+                        gap: '2px',
                         width: '75px',
                         height: '75px',
                         fontSize: '14px'
                       }}
                     >
-                      {player.elo}
+                      {randomPlayer && player.elo > randomPlayer.elo ? 
+                        <ArrowDownwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : 
+                        player.elo < randomPlayer.elo ? 
+                        <ArrowUpwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : null}
+                      <span>{player.elo}</span>
                     </div>
                   </div>
                   <div className="circle-container">
@@ -491,9 +494,9 @@ export default function ChessPlayerGame() {
                           src={`https://ratings.fide.com/images/flags/${getFlagCode(player)}.svg`}
                           alt={`${player.nationality} flag`}
                           style={{
-                            width: '75px',
-                            height: '75px',
-                            objectFit: 'fit',
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
                             borderRadius: '50%'
                           }}
                         />
@@ -501,45 +504,51 @@ export default function ChessPlayerGame() {
                     </div>
                   </div>
                   <div className="circle-container">
-                    <div className="circle-text">
-                      Born Year
-                      {randomPlayer && player.born > randomPlayer.born ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : player.born < randomPlayer.born ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
-                    </div>
+                    <div className="circle-text">Born Year</div>
                     <div
                       className="circle"
                       style={{
                         backgroundColor: player.born === randomPlayer.born ? 'green' : '#393E46',
                         border: '8px solid #222831',
                         display: 'flex',
+                        flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
+                        gap: '2px',
                         width: '75px',
                         height: '75px',
                         fontSize: '14px'
                       }}
                     >
-                      {player.born}
+                      {randomPlayer && player.born > randomPlayer.born ? 
+                        <ArrowDownwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : 
+                        player.born < randomPlayer.born ? 
+                        <ArrowUpwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : null}
+                      <span>{player.born}</span>
                     </div>
                   </div>
                   <div className="circle-container">
-                    <div className="circle-text">
-                      Title
-                      {randomPlayer && getTitleHierarchyValue(player.title) > getTitleHierarchyValue(randomPlayer.title) ? <ArrowDownwardIcon style={{ color: arrowColor }} /> : getTitleHierarchyValue(player.title) < getTitleHierarchyValue(randomPlayer.title) ? <ArrowUpwardIcon style={{ color: arrowColor }} /> : null}
-                    </div>
+                    <div className="circle-text">Title</div>
                     <div
                       className="circle"
                       style={{
                         backgroundColor: player.title === randomPlayer.title ? 'green' : '#393E46',
                         border: '8px solid #222831',
                         display: 'flex',
+                        flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
+                        gap: '2px',
                         width: '75px',
                         height: '75px',
                         fontSize: '14px'
                       }}
                     >
-                      {player.title}
+                      {randomPlayer && getTitleHierarchyValue(player.title) > getTitleHierarchyValue(randomPlayer.title) ? 
+                        <ArrowDownwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : 
+                        getTitleHierarchyValue(player.title) < getTitleHierarchyValue(randomPlayer.title) ? 
+                        <ArrowUpwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : null}
+                      <span>{player.title}</span>
                     </div>
                   </div>
                 </div>
