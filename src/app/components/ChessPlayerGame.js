@@ -451,7 +451,12 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
         </div>
       )}
 
-      <div className="flex justify-center mt-2 sm:mt-4 px-2 sm:px-4">
+      <div className="flex flex-col items-center mt-2 sm:mt-4 px-2 sm:px-4">
+        <div className="w-full max-w-[320px] sm:max-w-[400px] text-center mb-3">
+          <span className="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-transparent bg-clip-text text-sm sm:text-base font-bold animate-pulse">
+            <a href="https://chessstreet.com?ref=guess-the-chessplayer" target="_blank" rel="noopener noreferrer">Chess Street: Chat rooms for chess players</a>
+          </span>
+        </div>
         <div className="flex flex-col items-center bg-custom-white shadow-lg rounded-lg p-3 sm:p-5 w-full max-w-[320px] sm:max-w-[400px]">
           <div className="bg-custom-grey w-full aspect-square mb-3 sm:mb-4 flex items-center justify-center relative rounded-lg">
             <img
