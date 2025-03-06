@@ -9,10 +9,63 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Switch from '@mui/material/Switch';
+import { styled } from '@mui/material/styles';
 import { useRouter } from 'next/navigation';
 import chessPlayers from '../data/chessPlayers.json';
 import { getRandomPlayer } from '../actions/getRandomPlayer';
 import Script from 'next/script';
+
+// Custom styled switch
+const ModeSwitch = styled(Switch)(({ theme }) => ({
+  width: 32,
+  height: 20,
+  padding: 0,
+  display: 'flex',
+  '&.MuiSwitch-root': {
+    width: 32,
+    height: 20,
+    '@media (max-width: 640px)': {
+      width: 28,
+      height: 16,
+    },
+  },
+  '& .MuiSwitch-switchBase': {
+    padding: 2,
+    '&.Mui-checked': {
+      transform: 'translateX(12px)',
+      color: '#fff',
+      '& + .MuiSwitch-track': {
+        opacity: 1,
+        backgroundColor: '#00ADB5',
+        backgroundImage: 'linear-gradient(to right, #00ADB5, #00d4d4)',
+      },
+      '@media (max-width: 640px)': {
+        transform: 'translateX(12px)',
+      },
+    },
+    '@media (max-width: 640px)': {
+      padding: 1,
+    },
+  },
+  '& .MuiSwitch-thumb': {
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    backgroundColor: '#fff',
+    boxShadow: '0 1px 2px rgba(0,0,0,0.2)',
+    '@media (max-width: 640px)': {
+      width: 14,
+      height: 14,
+    },
+  },
+  '& .MuiSwitch-track': {
+    opacity: 1,
+    backgroundColor: '#222831',
+    backgroundImage: 'linear-gradient(to right, #222831, #393E46)',
+    borderRadius: 10,
+    border: '1px solid rgba(255, 255, 255, 0.1)',
+  },
+}));
 
 const arrowColor = '#00ADB5';
 
@@ -375,30 +428,10 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
               <span className={`text-[10px] sm:text-base mr-1 sm:mr-2 ${mode === 'daily' ? 'text-custom-teal font-bold' : 'text-gray-400'}`}>
                 Daily
               </span>
-              <Switch
-                size="small"
+              <ModeSwitch
                 checked={mode === 'endless'}
                 onChange={handleModeChange}
                 aria-label={`Switch to ${mode === 'daily' ? 'endless' : 'daily'} mode`}
-                sx={{
-                  padding: 0,
-                  width: { xs: 28, sm: 32 },
-                  height: { xs: 16, sm: 20 },
-                  '& .MuiSwitch-switchBase': {
-                    padding: 0,
-                    margin: '1px',
-                    '&.Mui-checked': {
-                      color: '#00ADB5',
-                      '& + .MuiSwitch-track': {
-                        backgroundColor: '#00ADB5',
-                      },
-                    },
-                  },
-                  '& .MuiSwitch-thumb': {
-                    width: { xs: 14, sm: 16 },
-                    height: { xs: 14, sm: 16 },
-                  },
-                }}
               />
               <span className={`text-[10px] sm:text-base ml-1 sm:ml-2 ${mode === 'endless' ? 'text-custom-teal font-bold' : 'text-gray-400'}`}>
                 Endless
