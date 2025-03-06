@@ -1,8 +1,7 @@
 import { getRandomPlayer } from '../../actions/getRandomPlayer';
 import { NextResponse } from 'next/server';
-import { runtime } from '../../config';
 
-export { runtime };
+export const runtime = 'edge';
 
 export async function GET() {
   try {
