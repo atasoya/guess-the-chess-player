@@ -9,6 +9,7 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import chessPlayers from '../data/chessPlayers.json';
+import { getRandomPlayer } from '../actions/getRandomPlayer';
 
 const arrowColor = '#00ADB5';
 
@@ -214,7 +215,7 @@ const getFlagCode = (player) => {
 
 const getTitleHierarchyValue = (title) => titleHierarchy[title] || 0;
 
-export default function ChessPlayerGame() {
+export default function ChessPlayerGame({ mode = 'daily' }) {
   const [windowWidth, setWindowWidth] = useState(0);
   const [foundCountry, setFoundCountry] = useState(false);
   const [randomPlayer, setRandomPlayer] = useState({});
@@ -224,9 +225,9 @@ export default function ChessPlayerGame() {
   const [blurLevel, setBlurLevel] = useState(30);
   const [guessMade, setGuessMade] = useState(false);
   const [dontAnimate, setDontAnimate] = useState(false);
-  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false); // State to manage modal visibility
-  const [tryAgainModalOpen, setTryAgainModalOpen] = useState(false); // State to manage "Try Again" modal visibility
-  const [isLoading, setIsLoading] = useState(true); // State to manage loading spinner visibility
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
+  const [tryAgainModalOpen, setTryAgainModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Initialize window width
@@ -244,30 +245,44 @@ export default function ChessPlayerGame() {
       setIsLoading(false);
     }, 500);
 
-    return () => clearTimeout(timer); // Cleanup function to clear the timer
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     // Function to set random player when component mounts
-    const randomIndex = Math.floor(Math.random() * chessPlayers.length);
-    const selectedRandomPlayer = chessPlayers[randomIndex];
-    setRandomPlayer(selectedRandomPlayer);
-  }, []);
+    const initializeRandomPlayer = async () => {
+      if (mode === 'daily') {
+        const player = await getRandomPlayer();
+        setRandomPlayer(player);
+      } else {
+        // Endless mode - use local random selection
+        const randomIndex = Math.floor(Math.random() * chessPlayers.length);
+        setRandomPlayer(chessPlayers[randomIndex]);
+      }
+    };
+
+    initializeRandomPlayer();
+  }, [mode]);
 
   const handleAutocompleteChange = (event, newValue) => {
     setSelectedPlayer(newValue);
     setDontAnimate(true);
   };
 
-  const handlePlayAgain = () => {
+  const handlePlayAgain = async () => {
     setIsWinner(false);
-    const randomIndex = Math.floor(Math.random() * chessPlayers.length);
-    const selectedRandomPlayer = chessPlayers[randomIndex];
-    setRandomPlayer(selectedRandomPlayer);
+    if (mode === 'daily') {
+      const player = await getRandomPlayer();
+      setRandomPlayer(player);
+    } else {
+      // Endless mode - use local random selection
+      const randomIndex = Math.floor(Math.random() * chessPlayers.length);
+      setRandomPlayer(chessPlayers[randomIndex]);
+    }
     setSelectedPlayerNames([]);
     setBlurLevel(30);
     setFoundCountry(false);
-    setTryAgainModalOpen(false); // Close the "Try Again" modal
+    setTryAgainModalOpen(false);
   };
 
   const handleGuess = () => {
@@ -323,7 +338,9 @@ export default function ChessPlayerGame() {
       )}
 
       <div className="bg-custom-black h-20 w-screen flex justify-between items-center relative">
-        <p className="text-custom-white font-bold text-lg mx-auto">Guess The Chess Player</p>
+        <p className="text-custom-white font-bold text-lg mx-auto">
+          {mode === 'daily' ? 'Daily Chess Player' : 'Endless Mode'}
+        </p>
         <div style={{ position: 'absolute', right: '20px', top: '50%', transform: 'translateY(-50%)' }}>
           <HelpOutlineIcon style={{ color: 'grey', fontSize: '24px', cursor: 'pointer' }} onClick={openHelpModal} />
         </div>
