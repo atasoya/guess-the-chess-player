@@ -459,6 +459,13 @@ export default function ChessPlayerGame() {
                       className="circle"
                       style={{
                         backgroundColor: player.elo === randomPlayer.elo ? 'green' : '#393E46',
+                        border: '8px solid #222831',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '75px',
+                        height: '75px',
+                        fontSize: '14px'
                       }}
                     >
                       {player.elo}
@@ -473,10 +480,24 @@ export default function ChessPlayerGame() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        gap: '5px'
+                        padding: '0',
+                        border: '8px solid #222831',
+                        width: '75px',
+                        height: '75px',
                       }}
                     >
-                      {player.nationality}
+                      {player.nationality !== "FIDE" && (
+                        <img
+                          src={`https://ratings.fide.com/images/flags/${getFlagCode(player)}.svg`}
+                          alt={`${player.nationality} flag`}
+                          style={{
+                            width: '75px',
+                            height: '75px',
+                            objectFit: 'fit',
+                            borderRadius: '50%'
+                          }}
+                        />
+                      )}
                     </div>
                   </div>
                   <div className="circle-container">
@@ -488,6 +509,13 @@ export default function ChessPlayerGame() {
                       className="circle"
                       style={{
                         backgroundColor: player.born === randomPlayer.born ? 'green' : '#393E46',
+                        border: '8px solid #222831',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '75px',
+                        height: '75px',
+                        fontSize: '14px'
                       }}
                     >
                       {player.born}
@@ -502,6 +530,13 @@ export default function ChessPlayerGame() {
                       className="circle"
                       style={{
                         backgroundColor: player.title === randomPlayer.title ? 'green' : '#393E46',
+                        border: '8px solid #222831',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '75px',
+                        height: '75px',
+                        fontSize: '14px'
                       }}
                     >
                       {player.title}
