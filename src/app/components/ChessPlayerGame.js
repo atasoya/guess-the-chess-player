@@ -8,6 +8,8 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Switch from '@mui/material/Switch';
+import { useRouter } from 'next/navigation';
 import chessPlayers from '../data/chessPlayers.json';
 import { getRandomPlayer } from '../actions/getRandomPlayer';
 
@@ -216,6 +218,7 @@ const getFlagCode = (player) => {
 const getTitleHierarchyValue = (title) => titleHierarchy[title] || 0;
 
 export default function ChessPlayerGame({ mode = 'daily' }) {
+  const router = useRouter();
   const [windowWidth, setWindowWidth] = useState(0);
   const [foundCountry, setFoundCountry] = useState(false);
   const [randomPlayer, setRandomPlayer] = useState({});
@@ -329,35 +332,93 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
     setTryAgainModalOpen(false);
   };
 
+  const handleModeChange = () => {
+    const newMode = mode === 'daily' ? 'endless' : 'daily';
+    router.push(newMode === 'daily' ? '/' : '/endless');
+  };
+
   return (
     <div className="App">
       {isLoading && (
         <div className="loading-spinner">
-          <CircularProgress />
+          <CircularProgress size={24} />
         </div>
       )}
 
-      <div className="bg-custom-black h-20 w-screen flex justify-between items-center relative">
-        <p className="text-custom-white font-bold text-lg mx-auto">
-          {mode === 'daily' ? 'Daily Chess Player' : 'Endless Mode'}
-        </p>
-        <div style={{ position: 'absolute', right: '20px', top: '50%', transform: 'translateY(-50%)' }}>
-          <HelpOutlineIcon style={{ color: 'grey', fontSize: '24px', cursor: 'pointer' }} onClick={openHelpModal} />
+      <div className="bg-custom-black h-14 sm:h-20 w-full flex items-center justify-between px-3 sm:px-6">
+        <h1 className="text-custom-white font-bold text-sm sm:text-xl md:text-2xl">
+          Guess The Chess Player
+        </h1>
+
+        <div className="flex items-center gap-1 sm:gap-4">
+          <div className="flex items-center bg-custom-grey rounded-full px-1.5 sm:px-3 py-0.5 sm:py-1">
+            <span className={`text-[10px] sm:text-base mr-1 sm:mr-2 ${mode === 'daily' ? 'text-custom-teal font-bold' : 'text-gray-400'}`}>
+              Daily
+            </span>
+            <Switch
+              size="small"
+              checked={mode === 'endless'}
+              onChange={handleModeChange}
+              sx={{
+                padding: 0,
+                width: { xs: 28, sm: 32 },
+                height: { xs: 16, sm: 20 },
+                '& .MuiSwitch-switchBase': {
+                  padding: 0,
+                  margin: '1px',
+                  '&.Mui-checked': {
+                    color: '#00ADB5',
+                    '& + .MuiSwitch-track': {
+                      backgroundColor: '#00ADB5',
+                    },
+                  },
+                },
+                '& .MuiSwitch-thumb': {
+                  width: { xs: 14, sm: 16 },
+                  height: { xs: 14, sm: 16 },
+                },
+              }}
+            />
+            <span className={`text-[10px] sm:text-base ml-1 sm:ml-2 ${mode === 'endless' ? 'text-custom-teal font-bold' : 'text-gray-400'}`}>
+              Endless
+            </span>
+          </div>
+          <HelpOutlineIcon 
+            style={{ fontSize: windowWidth >= 640 ? '24px' : '16px' }} 
+            className="text-gray-400 hover:text-gray-300 cursor-pointer"
+            onClick={openHelpModal}
+          />
         </div>
       </div>
 
       {isHelpModalOpen && (
         <div className="modal">
-          <div className="modal-content">
-            <p><strong><h1>Welcome to "Guess The Chess Player"!</h1></strong></p>
-            <ul>
-              <li style={{ marginBottom: "10px" }}>This interactive game challenges you to guess the identity of a chess player based on various clues provided.</li>
-              <li style={{ marginBottom: "10px" }}>The game randomly selects a chess player from the March 2025 rating list provided by FIDE, the international chess federation. (Top 100 open & woman)</li>
-              <li style={{ marginBottom: "10px" }}>Your task is to analyze the clues given, including the player's photo, Elo rating, nationality, birth year, and title, and make an educated guess about the identity of the chess player.</li>
-              <li style={{ marginBottom: "10px" }}>Have fun guessing and testing your knowledge of the chess world!</li>
-              <li><a href="https://github.com/atasoya/guess-the-chess-player" target="_blank" rel="noopener noreferrer"><GitHubIcon /></a></li>
+          <div className="modal-content max-w-[90vw] sm:max-w-[500px] p-4 sm:p-6">
+            <p className="text-lg sm:text-xl font-bold mb-4">Welcome to "Guess The Chess Player"!</p>
+            <ul className="space-y-3 text-sm sm:text-base">
+              <li>This interactive game challenges you to guess the identity of a chess player based on various clues provided.</li>
+              <li>The game randomly selects a chess player from the March 2025 rating list provided by FIDE, the international chess federation. (Top 100 open & woman)</li>
+              <li>Your task is to analyze the clues given, including the player's photo, Elo rating, nationality, birth year, and title, and make an educated guess about the identity of the chess player.</li>
+              <li>Have fun guessing and testing your knowledge of the chess world!</li>
             </ul>
-            <button onClick={closeHelpModal} style={{ marginTop: "20px" }}>Close</button>
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6">
+              <a href="https://www.buymeacoffee.com/atasoyata" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="transition-opacity hover:opacity-90">
+                <img 
+                  src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+                  alt="Buy Me A Coffee" 
+                  style={{ height: '40px', width: '145px' }}
+                />
+              </a>
+              <button 
+                onClick={closeHelpModal}
+                className="w-full sm:w-auto bg-custom-teal text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -370,12 +431,6 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
           </div>
         </div>
       )}
-
-      <div className="coffee-image-container" style={{ position: 'relative', textAlign: 'center', marginTop: '20px', "marginLeft": "20px" }}>
-        <a href="https://www.buymeacoffee.com/atasoyata" target="_blank" rel="noopener noreferrer">
-          <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: '40px', width: '145px' }} />
-        </a>
-      </div>
 
       {isWinner && (
         <div className="modal">
@@ -396,9 +451,9 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
         </div>
       )}
 
-      <div className="flex justify-center mt-10" style={{ "marginTop": "10px" }}>
-        <div className="flex flex-col items-center bg-custom-white shadow-lg rounded-lg p-5" >
-          <div className="bg-custom-grey h-64 w-64 mb-4 flex items-center justify-center relative">
+      <div className="flex justify-center mt-2 sm:mt-4 px-2 sm:px-4">
+        <div className="flex flex-col items-center bg-custom-white shadow-lg rounded-lg p-3 sm:p-5 w-full max-w-[320px] sm:max-w-[400px]">
+          <div className="bg-custom-grey w-full aspect-square mb-3 sm:mb-4 flex items-center justify-center relative rounded-lg">
             <img
               src={"/players/" + randomPlayer.ID + ".jpeg"}
               alt={randomPlayer.ID || 'Chess Player'}
@@ -409,7 +464,7 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
               <img
                 src={`https://ratings.fide.com/images/flags/${getFlagCode(randomPlayer)}.svg`}
                 alt="Found Country"
-                className="absolute bottom-0 right-0 h-9 w-12"
+                className="absolute bottom-0 right-0 h-7 w-9 sm:h-9 sm:w-12"
               />
             )}
           </div>
@@ -417,12 +472,19 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
             disablePortal
             id="combo-box-demo"
             options={chessPlayers}
-            sx={{ width: 300 }}
+            size="small"
+            sx={{ 
+              width: '100%',
+              '& .MuiInputBase-root': {
+                fontSize: { xs: '0.875rem', sm: '1rem' }
+              }
+            }}
             renderInput={(params) => (
               <TextField
                 {...params}
                 label="Guess The Chess Player"
                 onKeyDown={handleKeyDown}
+                size="small"
                 sx={{
                   '& .MuiOutlinedInput-root': {
                     '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
@@ -440,131 +502,70 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
             onChange={handleAutocompleteChange}
             value={selectedPlayer}
           />
-          {windowWidth <= 768 && (
-            <button
-              className="mobile-only-button"
-              onClick={handleGuess}
-              style={{
-                display: 'block',
-                marginTop: '10px',
-                backgroundColor: '#00ADB5',
-                color: 'white',
-                border: 'none',
-                padding: '10px 20px',
-                borderRadius: '5px',
-                cursor: 'pointer',
-              }}
-            >
-              Guess
-            </button>
-          )}
+          <button
+            className="w-full sm:hidden mt-3 bg-custom-teal text-white py-1.5 px-3 rounded-md hover:bg-opacity-90 transition-all text-sm"
+            onClick={handleGuess}
+          >
+            Guess
+          </button>
         </div>
       </div>
+
       {selectedPlayerNames.length > 0 && (
-        <div className="mt-4 px-5">
+        <div className="mt-3 sm:mt-4 px-2 sm:px-4">
           <div className="stack">
             {selectedPlayerNames.map((player, index) => (
-              <div key={`${player.label}-${index}-${Math.random()}`} className={`stack-item ${index === 0 && guessMade && !dontAnimate ? 'animate-in' : ''}`}>
-                <h3 className="stack-title">{player.label}</h3>
-                <div className="circles-container">
+              <div key={`${player.label}-${index}-${Math.random()}`} 
+                   className={`stack-item ${index === 0 && guessMade && !dontAnimate ? 'animate-in' : ''}`}>
+                <h3 className="stack-title text-xs sm:text-base mb-2">{player.label}</h3>
+                <div className="circles-container flex flex-wrap justify-center gap-2 sm:gap-4">
                   <div className="circle-container">
-                    <div className="circle-text">Elo</div>
+                    <div className="circle-text text-xs sm:text-sm">Elo</div>
                     <div
-                      className="circle"
-                      style={{
-                        backgroundColor: player.elo === randomPlayer.elo ? 'green' : '#393E46',
-                        border: '8px solid #222831',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '2px',
-                        width: '75px',
-                        height: '75px',
-                        fontSize: '14px'
-                      }}
+                      className={`circle flex flex-col items-center justify-center w-[50px] h-[50px] sm:w-[75px] sm:h-[75px] text-xs sm:text-sm border-4 sm:border-8 border-[#222831] ${player.elo === randomPlayer.elo ? 'bg-green-600' : 'bg-[#393E46]'}`}
                     >
                       {randomPlayer && player.elo > randomPlayer.elo ? 
-                        <ArrowDownwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : 
+                        <ArrowDownwardIcon style={{ color: arrowColor, fontSize: windowWidth >= 640 ? '16px' : '14px', marginBottom: windowWidth >= 640 ? '-4px' : '-2px' }} /> : 
                         player.elo < randomPlayer.elo ? 
-                        <ArrowUpwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : null}
+                        <ArrowUpwardIcon style={{ color: arrowColor, fontSize: windowWidth >= 640 ? '16px' : '14px', marginBottom: windowWidth >= 640 ? '-4px' : '-2px' }} /> : null}
                       <span>{player.elo}</span>
                     </div>
                   </div>
                   <div className="circle-container">
-                    <div className="circle-text">Nationality</div>
+                    <div className="circle-text text-xs sm:text-sm">Nationality</div>
                     <div
-                      className="circle"
-                      style={{
-                        backgroundColor: player.nationality === randomPlayer.nationality ? 'green' : '#393E46',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        padding: '0',
-                        border: '8px solid #222831',
-                        width: '75px',
-                        height: '75px',
-                      }}
+                      className={`circle flex items-center justify-center w-[50px] h-[50px] sm:w-[75px] sm:h-[75px] border-4 sm:border-8 border-[#222831] ${player.nationality === randomPlayer.nationality ? 'bg-green-600' : 'bg-[#393E46]'}`}
                     >
                       {player.nationality !== "FIDE" && (
                         <img
                           src={`https://ratings.fide.com/images/flags/${getFlagCode(player)}.svg`}
                           alt={`${player.nationality} flag`}
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            borderRadius: '50%'
-                          }}
+                          className="w-full h-full object-cover rounded-full"
                         />
                       )}
                     </div>
                   </div>
                   <div className="circle-container">
-                    <div className="circle-text">Born Year</div>
+                    <div className="circle-text text-xs sm:text-sm">Born Year</div>
                     <div
-                      className="circle"
-                      style={{
-                        backgroundColor: player.born === randomPlayer.born ? 'green' : '#393E46',
-                        border: '8px solid #222831',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '2px',
-                        width: '75px',
-                        height: '75px',
-                        fontSize: '14px'
-                      }}
+                      className={`circle flex flex-col items-center justify-center w-[50px] h-[50px] sm:w-[75px] sm:h-[75px] text-xs sm:text-sm border-4 sm:border-8 border-[#222831] ${player.born === randomPlayer.born ? 'bg-green-600' : 'bg-[#393E46]'}`}
                     >
                       {randomPlayer && player.born > randomPlayer.born ? 
-                        <ArrowDownwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : 
+                        <ArrowDownwardIcon style={{ color: arrowColor, fontSize: '14px', marginBottom: '-2px' }} /> : 
                         player.born < randomPlayer.born ? 
-                        <ArrowUpwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : null}
+                        <ArrowUpwardIcon style={{ color: arrowColor, fontSize: '14px', marginBottom: '-2px' }} /> : null}
                       <span>{player.born}</span>
                     </div>
                   </div>
                   <div className="circle-container">
-                    <div className="circle-text">Title</div>
+                    <div className="circle-text text-xs sm:text-sm">Title</div>
                     <div
-                      className="circle"
-                      style={{
-                        backgroundColor: player.title === randomPlayer.title ? 'green' : '#393E46',
-                        border: '8px solid #222831',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '2px',
-                        width: '75px',
-                        height: '75px',
-                        fontSize: '14px'
-                      }}
+                      className={`circle flex flex-col items-center justify-center w-[50px] h-[50px] sm:w-[75px] sm:h-[75px] text-xs sm:text-sm border-4 sm:border-8 border-[#222831] ${player.title === randomPlayer.title ? 'bg-green-600' : 'bg-[#393E46]'}`}
                     >
                       {randomPlayer && getTitleHierarchyValue(player.title) > getTitleHierarchyValue(randomPlayer.title) ? 
-                        <ArrowDownwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : 
+                        <ArrowDownwardIcon style={{ color: arrowColor, fontSize: '14px', marginBottom: '-2px' }} /> : 
                         getTitleHierarchyValue(player.title) < getTitleHierarchyValue(randomPlayer.title) ? 
-                        <ArrowUpwardIcon style={{ color: arrowColor, fontSize: '16px', marginBottom: '-4px' }} /> : null}
+                        <ArrowUpwardIcon style={{ color: arrowColor, fontSize: '14px', marginBottom: '-2px' }} /> : null}
                       <span>{player.title}</span>
                     </div>
                   </div>
@@ -576,4 +577,4 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
       )}
     </div>
   );
-} 
+}
