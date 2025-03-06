@@ -1,40 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 57, 62, 70;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .modal {
@@ -118,7 +97,6 @@
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-
 .stack-item:hover {
   transform: translateY(-5px);
 }
@@ -134,9 +112,6 @@
   }
 }
 
-
-
-
 .stack-title {
   margin-top: 0;
   margin-bottom: 20px;
@@ -151,11 +126,10 @@
 .circle-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  margin-right: 0; /* Remove margin between circle containers */
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
 }
-
 
 .circle {
   width: 75px;
@@ -181,13 +155,6 @@
   font-size: 16px;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #393E46;
-}
-
 .card-container {
   background-color: #222831;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -196,7 +163,6 @@
 .card-content {
   color: #000;
 }
-
 
 .mobile-only-button {
   display: none; 
@@ -208,13 +174,28 @@
   cursor: pointer; 
 }
 
+.loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.circle-text {
+  margin-bottom: 5px;
+}
 
 @media (max-width: 768px) {
   .mobile-only-button {
     display: block;
     margin-top: 10px;
   }
-
 
   .stack-item {
     width: 100%; 
@@ -225,6 +206,7 @@
   .stack-title, .circle-text, .circle {
     font-size: 14px; 
   }
+  
   .circle {
     width: 50px;
     height: 50px;
@@ -248,22 +230,4 @@
     align-items: center;
     font-size: 14px;
   }
-}
-
-/* App.css */
-.App {
-  position: relative;
-}
-
-.loading-spinner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(57, 62, 70, 1); /* Semi-transparent white background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* Ensure the spinner is on top of other elements */
-}
+} 
