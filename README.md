@@ -7,49 +7,72 @@
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
 # Guess The Chess Player
 
-Guess The Chess Player is a fun game where players have to guess the name of a chess player based on clues or images provided. The app provides an interactive and engaging experience for chess enthusiasts and helps them test their knowledge of famous chess players.
+A fun interactive game where you can test your knowledge of chess players. Try to guess the identity of a chess player based on various clues like their photo, Elo rating, nationality, birth year, and title.
 
+## Features
 
-## How To Contribute
-We welcome contributions to this project, especially in the form of adding new players.
+- Random selection of chess players from the FIDE rating list
+- Progressive hints as you make guesses
+- Visual feedback on how close your guesses are
+- Mobile-responsive design
 
-To contribute, please follow these steps:
+## Tech Stack
 
-1. Add the new player's details to the `src/data/chessPlayers.json` file.
-2. Add the player's image to the `public/players` directory.
+- Next.js 14
+- React
+- Material-UI
+- Tailwind CSS
 
-Once you've made your changes, please submit a pull request. All pull requests are appreciated and will be reviewed promptly.
+## Getting Started
 
-## Installation
+First, install the dependencies:
 
-### Prerequisites
-
-Before you begin, ensure you have the following installed on your system:
-
-- Node.js and npm: Node.js is a JavaScript runtime that is required to run this application. npm is a package manager for Node.js. You can download both from the [official Node.js website](https://nodejs.org/).
-
-- Git: Git is a version control system that allows you to download this project's source code. You can download it from the [official Git website](https://git-scm.com/).
-
-### Installation
-
-1. Clone the repository to your local machine using Git. Open a terminal and run the following command:
-```bash
-git clone https://github.com/atasoya/guess-the-chess-player.git
-```
-2. Navigate into the project directory:
-```bash
-cd repository
-```
-3. Install the project dependencies:
 ```bash
 npm install
+# or
+yarn install
 ```
-4. Run the application
+
+Then, run the development server:
+
 ```bash
-npm start
+npm run dev
+# or
+yarn dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## How to Play
+
+1. The game will randomly select a chess player from the FIDE rating list.
+2. You'll see a blurred image of the player.
+3. Make a guess by typing a player's name in the search box.
+4. After each guess, you'll get feedback on how close you are:
+   - Green circles indicate a correct attribute
+   - Arrows indicate if the actual value is higher or lower
+5. The image becomes less blurred with each guess
+6. Try to guess the player with as few attempts as possible!
+
+## Deployment
+
+The app can be deployed to Vercel or any other hosting platform that supports Next.js.
+
+```bash
+npm run build
+npm run start
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ## Preview
 
@@ -59,4 +82,3 @@ npm start
 ## Acknowledgments
 
 A huge thank you to all contributors and players who have made this project possible. Your support and feedback have been invaluable.
-

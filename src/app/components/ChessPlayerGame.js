@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
-import './App.css';
 import CircularProgress from '@mui/material/CircularProgress';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
@@ -7,7 +8,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import chessPlayers from './data/chessPlayers.json';
+import chessPlayers from '../data/chessPlayers.json';
 
 const arrowColor = '#00ADB5';
 
@@ -213,8 +214,8 @@ const getFlagCode = (player) => {
 
 const getTitleHierarchyValue = (title) => titleHierarchy[title] || 0;
 
-function App() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+export default function ChessPlayerGame() {
+  const [windowWidth, setWindowWidth] = useState(0);
   const [foundCountry, setFoundCountry] = useState(false);
   const [randomPlayer, setRandomPlayer] = useState({});
   const [selectedPlayer, setSelectedPlayer] = useState(null);
@@ -228,6 +229,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(true); // State to manage loading spinner visibility
 
   useEffect(() => {
+    // Initialize window width
+    setWindowWidth(window.innerWidth);
+    
     // Function to set window width on resize
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
@@ -334,7 +338,7 @@ function App() {
               <li style={{ marginBottom: "10px" }}>The game randomly selects a chess player from the March 2025 rating list provided by FIDE, the international chess federation. (Top 100 open & woman)</li>
               <li style={{ marginBottom: "10px" }}>Your task is to analyze the clues given, including the player's photo, Elo rating, nationality, birth year, and title, and make an educated guess about the identity of the chess player.</li>
               <li style={{ marginBottom: "10px" }}>Have fun guessing and testing your knowledge of the chess world!</li>
-              <li><a href="https://github.com/atasoya/guess-the-chess-player" target="_blank"><GitHubIcon /></a></li>
+              <li><a href="https://github.com/atasoya/guess-the-chess-player" target="_blank" rel="noopener noreferrer"><GitHubIcon /></a></li>
             </ul>
             <button onClick={closeHelpModal} style={{ marginTop: "20px" }}>Close</button>
           </div>
@@ -351,7 +355,7 @@ function App() {
       )}
 
       <div className="coffee-image-container" style={{ position: 'relative', textAlign: 'center', marginTop: '20px', "marginLeft": "20px" }}>
-        <a href="https://www.buymeacoffee.com/atasoyata" target="_blank">
+        <a href="https://www.buymeacoffee.com/atasoyata" target="_blank" rel="noopener noreferrer">
           <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: '40px', width: '145px' }} />
         </a>
       </div>
@@ -511,6 +515,4 @@ function App() {
       )}
     </div>
   );
-}
-
-export default App;
+} 
