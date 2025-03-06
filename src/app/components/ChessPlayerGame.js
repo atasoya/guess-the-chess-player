@@ -469,7 +469,7 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
                 </a>
                 <button 
                   onClick={closeHelpModal}
-                  className="w-full sm:w-auto bg-custom-teal text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all"
+                  className="w-full sm:w-auto bg-custom-blue text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all"
                 >
                   Close
                 </button>
@@ -482,7 +482,12 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
           <div className="modal">
             <div className="modal-content">
               <p>Oops! It seems you need to try again.</p>
-              <button onClick={handlePlayAgain}>Try Again</button>
+              <button 
+                onClick={handlePlayAgain}
+                className="bg-custom-blue text-white py-1.5 px-4 rounded-md hover:bg-opacity-90 transition-all"
+              >
+                Try Again
+              </button>
             </div>
           </div>
         )}
@@ -501,7 +506,12 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
               />
           </div>
               <p>Congratulations! You've guessed correctly.</p>
-              <button onClick={handlePlayAgain}>Play Again</button>
+              <button 
+                onClick={handlePlayAgain}
+                className="bg-custom-blue text-white py-1.5 px-4 rounded-md hover:bg-opacity-90 transition-all"
+              >
+                Play Again
+              </button>
             </div>
           </div>
         )}
@@ -573,7 +583,7 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
               aria-label="Search and select a chess player"
             />
             <button
-              className="w-full sm:hidden mt-3 bg-custom-teal text-white py-1.5 px-3 rounded-md hover:bg-opacity-90 transition-all text-sm"
+              className="w-full sm:hidden mt-3 bg-custom-blue text-white py-1.5 px-3 rounded-md hover:bg-opacity-90 transition-all text-sm"
               onClick={handleGuess}
               aria-label="Submit your guess"
             >
