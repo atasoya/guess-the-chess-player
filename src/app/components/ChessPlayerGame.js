@@ -520,7 +520,7 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
           <div className="w-full max-w-[320px] sm:max-w-[400px] text-center mb-3">
             <span className="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-transparent bg-clip-text text-sm sm:text-base font-bold animate-pulse">
               <a 
-                href="https://chessstreet.com?ref=guess-the-chessplayer" 
+                href="https://chesstreet.com?ref=guess-the-chessplayer" 
                 target="_blank" 
                 rel="noopener noreferrer sponsored" 
                 title="Visit Chess Street - The Ultimate Community for Chess Players"
