@@ -343,23 +343,38 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
   };
 
   const handleGuess = () => {
+    // Don't proceed if no player is selected
+    if (!selectedPlayer) return;
+    
     setDontAnimate(false);
-    if (selectedPlayer) {
-      if (selectedPlayer === randomPlayer) {
-        setBlurLevel(0);
-        setIsWinner(true);
-        setFoundCountry(true);
-      } else {
-        setIsWinner(false);
-      }
-      if (randomPlayer.nationality === selectedPlayer.nationality) {
-        setFoundCountry(true);
-      }
-      setSelectedPlayerNames(prevNames => [selectedPlayer, ...prevNames]);
-      setSelectedPlayer(null);
-      setBlurLevel(prevLevel => Math.max(prevLevel - 5, 0));
-      setGuessMade(true);
+    
+    // Check if the selected player matches the random player
+    const isCorrectGuess = selectedPlayer.ID === randomPlayer.ID;
+    
+    if (isCorrectGuess) {
+      // Set winning state
+      setBlurLevel(0);
+      setFoundCountry(true);
+      setIsWinner(true);
+      console.log("Correct guess! Game should end now.");
+      return; // Exit the function to prevent further processing
     }
+    
+    // Handle incorrect guess
+    setIsWinner(false);
+    
+    // Check if nationalities match
+    if (randomPlayer.nationality === selectedPlayer.nationality) {
+      setFoundCountry(true);
+    }
+    
+    // Add the guessed player to the list
+    setSelectedPlayerNames(prevNames => [selectedPlayer, ...prevNames]);
+    
+    // Reset selection and update blur level
+    setSelectedPlayer(null);
+    setBlurLevel(prevLevel => Math.max(prevLevel - 5, 0));
+    setGuessMade(true);
   };
 
   const handleKeyDown = (event) => {
@@ -492,23 +507,25 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
           </div>
         )}
 
+        {/* Success Modal */}
         {isWinner && (
           <div className="modal">
             <div className="modal-content">
-            <p className='font-bold'>
-                {randomPlayer.label}
-            </p>
-            <div className='flex justify-center mb-4'>
-              <img
-                src={`/players/${randomPlayer.ID}.jpeg`}
-                alt={randomPlayer.name || 'Chess Player'}
-                style={{ height: '200px', width: '200px', objectFit: 'cover' }}
-              />
-          </div>
-              <p>Congratulations! You've guessed correctly.</p>
+              <h2 className="text-lg font-bold mb-2">Congratulations!</h2>
+              <p className='font-bold text-xl mb-2'>
+                {randomPlayer.label || randomPlayer.name}
+              </p>
+              <div className='flex justify-center mb-4'>
+                <img
+                  src={`/players/${randomPlayer.ID}.jpeg`}
+                  alt={randomPlayer.name || 'Chess Player'}
+                  style={{ height: '200px', width: '200px', objectFit: 'cover' }}
+                />
+              </div>
+              <p>You've guessed the player correctly!</p>
               <button 
                 onClick={handlePlayAgain}
-                className="bg-custom-blue text-white py-1.5 px-4 rounded-md hover:bg-opacity-90 transition-all"
+                className="bg-custom-blue text-white py-1.5 px-4 rounded-md hover:bg-opacity-90 transition-all mt-4"
               >
                 Play Again
               </button>
