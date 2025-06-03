@@ -467,7 +467,7 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
               <p className="text-lg sm:text-xl font-bold mb-4">Welcome to "Guess The Chess Player"!</p>
               <ul className="space-y-3 text-sm sm:text-base">
                 <li>This interactive game challenges you to guess the identity of a chess player based on various clues provided.</li>
-                <li>The game randomly selects a chess player from the March 2025 rating list provided by FIDE, the international chess federation. (Top 100 open & woman)</li>
+                <li>The game randomly selects a chess player from the June 2025 rating list provided by FIDE, the international chess federation. (Top 100 open & woman)</li>
                 <li>Your task is to analyze the clues given, including the player's photo, Elo rating, nationality, birth year, and title, and make an educated guess about the identity of the chess player.</li>
                 <li>Have fun guessing and testing your knowledge of the chess world!</li>
               </ul>
