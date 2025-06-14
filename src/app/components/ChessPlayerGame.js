@@ -340,6 +340,7 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
     setBlurLevel(30);
     setFoundCountry(false);
     setTryAgainModalOpen(false);
+    setSelectedPlayer(null)
   };
 
   const handleGuess = () => {
