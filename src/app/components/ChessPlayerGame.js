@@ -538,14 +538,12 @@ export default function ChessPlayerGame({ mode = 'daily' }) {
           <div className="w-full max-w-[320px] sm:max-w-[400px] text-center mb-3">
             <span className="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-transparent bg-clip-text text-sm sm:text-base font-bold animate-pulse">
               <a 
-                href="https://chesstreet.com?ref=guess-the-chessplayer" 
+                href="https://insigh.to/b/guess-the-chess-player" 
                 target="_blank" 
                 rel="noopener noreferrer sponsored" 
-                title="Visit Chess Street - The Ultimate Community for Chess Players"
-                aria-label="Chess Street: Online community with chat rooms for chess players"
                 className="hover:underline focus:outline-none focus:ring-2 focus:ring-purple-500 rounded"
               >
-                Chess Street: #1 Community & Chat for Chess Players
+      Your Ideas Matter: Submit a Feature
               </a>
             </span>
           </div>
