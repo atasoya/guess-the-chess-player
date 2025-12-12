@@ -69,7 +69,7 @@ npm run start
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
-
+I usually add new player data monthly but in case I didn't yet. You can open new branch `git checkout -b dec2025` and run the scraper for fide top 100 players, `cd scraper && python3 main.py`.
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
