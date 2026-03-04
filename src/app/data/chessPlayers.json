@@ -49,30 +49,18 @@
     },
     {
         "Rank": 5,
-        "ID": 35009192,
+        "ID": 14204118,
         "Gender": "Male",
-        "label": "Erigaisi Arjun",
-        "elo": 2775,
-        "born": 2003,
-        "nationality": "India",
+        "label": "Abdusattorov, Nodirbek",
+        "elo": 2771,
+        "born": 2004,
+        "nationality": "Uzbekistan",
         "title": "GM",
-        "rapid": 2741,
-        "blitz": 2776
+        "rapid": 2703,
+        "blitz": 2785
     },
     {
         "Rank": 6,
-        "ID": 24116068,
-        "Gender": "Male",
-        "label": "Giri, Anish",
-        "elo": 2760,
-        "born": 1994,
-        "nationality": "Netherlands",
-        "title": "GM",
-        "rapid": 2689,
-        "blitz": 2666
-    },
-    {
-        "Rank": 7,
         "ID": 12573981,
         "Gender": "Male",
         "label": "Firouzja, Alireza",
@@ -84,31 +72,7 @@
         "blitz": 2796
     },
     {
-        "Rank": 8,
-        "ID": 25059530,
-        "Gender": "Male",
-        "label": "Praggnanandhaa R",
-        "elo": 2758,
-        "born": 2005,
-        "nationality": "India",
-        "title": "GM",
-        "rapid": 2663,
-        "blitz": 2698
-    },
-    {
-        "Rank": 9,
-        "ID": 46616543,
-        "Gender": "Male",
-        "label": "Gukesh D",
-        "elo": 2754,
-        "born": 2006,
-        "nationality": "India",
-        "title": "GM",
-        "rapid": 2692,
-        "blitz": 2646
-    },
-    {
-        "Rank": 10,
+        "Rank": 7,
         "ID": 8603405,
         "Gender": "Male",
         "label": "Wei, Yi",
@@ -120,7 +84,19 @@
         "blitz": 2698
     },
     {
-        "Rank": 11,
+        "Rank": 8,
+        "ID": 24116068,
+        "Gender": "Male",
+        "label": "Giri, Anish",
+        "elo": 2753,
+        "born": 1994,
+        "nationality": "Netherlands",
+        "title": "GM",
+        "rapid": 2689,
+        "blitz": 2666
+    },
+    {
+        "Rank": 9,
         "ID": 5202213,
         "Gender": "Male",
         "label": "So, Wesley",
@@ -132,28 +108,52 @@
         "blitz": 2789
     },
     {
-        "Rank": 12,
-        "ID": 14204118,
+        "Rank": 10,
+        "ID": 46616543,
         "Gender": "Male",
-        "label": "Abdusattorov, Nodirbek",
-        "elo": 2751,
-        "born": 2004,
+        "label": "Gukesh D",
+        "elo": 2748,
+        "born": 2006,
+        "nationality": "India",
+        "title": "GM",
+        "rapid": 2692,
+        "blitz": 2646
+    },
+    {
+        "Rank": 11,
+        "ID": 35009192,
+        "Gender": "Male",
+        "label": "Erigaisi Arjun",
+        "elo": 2745,
+        "born": 2003,
+        "nationality": "India",
+        "title": "GM",
+        "rapid": 2741,
+        "blitz": 2776
+    },
+    {
+        "Rank": 12,
+        "ID": 14205483,
+        "Gender": "Male",
+        "label": "Sindarov, Javokhir",
+        "elo": 2745,
+        "born": 2005,
         "nationality": "Uzbekistan",
         "title": "GM",
-        "rapid": 2703,
-        "blitz": 2785
+        "rapid": 2727,
+        "blitz": 2662
     },
     {
         "Rank": 13,
-        "ID": 5000017,
+        "ID": 25059530,
         "Gender": "Male",
-        "label": "Anand, Viswanathan",
-        "elo": 2743,
-        "born": 1969,
+        "label": "Praggnanandhaa R",
+        "elo": 2741,
+        "born": 2005,
         "nationality": "India",
         "title": "GM",
-        "rapid": 2729,
-        "blitz": 2704
+        "rapid": 2663,
+        "blitz": 2698
     },
     {
         "Rank": 14,
@@ -193,6 +193,18 @@
     },
     {
         "Rank": 17,
+        "ID": 2093596,
+        "Gender": "Male",
+        "label": "Niemann, Hans Moke",
+        "elo": 2735,
+        "born": 2003,
+        "nationality": "America",
+        "title": "GM",
+        "rapid": 2646,
+        "blitz": 2699
+    },
+    {
+        "Rank": 18,
         "ID": 12401137,
         "Gender": "Male",
         "label": "Le, Quang Liem",
@@ -204,7 +216,19 @@
         "blitz": 2683
     },
     {
-        "Rank": 18,
+        "Rank": 19,
+        "ID": 1039784,
+        "Gender": "Male",
+        "label": "Van Foreest, Jorden",
+        "elo": 2729,
+        "born": 1999,
+        "nationality": "Netherlands",
+        "title": "GM",
+        "rapid": 2595,
+        "blitz": 2688
+    },
+    {
+        "Rank": 20,
         "ID": 13300474,
         "Gender": "Male",
         "label": "Aronian, Levon",
@@ -216,43 +240,7 @@
         "blitz": 2749
     },
     {
-        "Rank": 19,
-        "ID": 13401319,
-        "Gender": "Male",
-        "label": "Mamedyarov, Shakhriyar",
-        "elo": 2727,
-        "born": 1985,
-        "nationality": "Azerbaijan",
-        "title": "GM",
-        "rapid": 2712,
-        "blitz": 2632
-    },
-    {
-        "Rank": 20,
-        "ID": 14205483,
-        "Gender": "Male",
-        "label": "Sindarov, Javokhir",
-        "elo": 2726,
-        "born": 2005,
-        "nationality": "Uzbekistan",
-        "title": "GM",
-        "rapid": 2727,
-        "blitz": 2662
-    },
-    {
         "Rank": 21,
-        "ID": 2093596,
-        "Gender": "Male",
-        "label": "Niemann, Hans Moke",
-        "elo": 2725,
-        "born": 2003,
-        "nationality": "America",
-        "title": "GM",
-        "rapid": 2646,
-        "blitz": 2699
-    },
-    {
-        "Rank": 22,
         "ID": 4168119,
         "Gender": "Male",
         "label": "Nepomniachtchi, Ian",
@@ -264,7 +252,7 @@
         "blitz": 2765
     },
     {
-        "Rank": 23,
+        "Rank": 22,
         "ID": 623539,
         "Gender": "Male",
         "label": "Vachier-Lagrave, Maxime",
@@ -276,19 +264,7 @@
         "blitz": 2761
     },
     {
-        "Rank": 24,
-        "ID": 2056437,
-        "Gender": "Male",
-        "label": "Liang, Awonder",
-        "elo": 2719,
-        "born": 2003,
-        "nationality": "America",
-        "title": "GM",
-        "rapid": 2511,
-        "blitz": 2558
-    },
-    {
-        "Rank": 25,
+        "Rank": 23,
         "ID": 8603820,
         "Gender": "Male",
         "label": "Yu, Yangyi",
@@ -300,7 +276,7 @@
         "blitz": 2707
     },
     {
-        "Rank": 26,
+        "Rank": 24,
         "ID": 25092340,
         "Gender": "Male",
         "label": "Nihal Sarin",
@@ -310,6 +286,30 @@
         "title": "GM",
         "rapid": 2682,
         "blitz": 2723
+    },
+    {
+        "Rank": 25,
+        "ID": 2056437,
+        "Gender": "Male",
+        "label": "Liang, Awonder",
+        "elo": 2714,
+        "born": 2003,
+        "nationality": "America",
+        "title": "GM",
+        "rapid": 2511,
+        "blitz": 2563
+    },
+    {
+        "Rank": 26,
+        "ID": 13401319,
+        "Gender": "Male",
+        "label": "Mamedyarov, Shakhriyar",
+        "elo": 2713,
+        "born": 1985,
+        "nationality": "Azerbaijan",
+        "title": "GM",
+        "rapid": 2707,
+        "blitz": 2632
     },
     {
         "Rank": 27,
@@ -325,6 +325,18 @@
     },
     {
         "Rank": 28,
+        "ID": 24130737,
+        "Gender": "Male",
+        "label": "Fedoseev, Vladimir",
+        "elo": 2708,
+        "born": 1995,
+        "nationality": "Slovenia",
+        "title": "GM",
+        "rapid": 2690,
+        "blitz": 2756
+    },
+    {
+        "Rank": 29,
         "ID": 12539929,
         "Gender": "Male",
         "label": "Maghsoodloo, Parham",
@@ -336,7 +348,7 @@
         "blitz": 2626
     },
     {
-        "Rank": 29,
+        "Rank": 30,
         "ID": 5029465,
         "Gender": "Male",
         "label": "Vidit, Santosh Gujrathi",
@@ -348,43 +360,7 @@
         "blitz": 2688
     },
     {
-        "Rank": 30,
-        "ID": 1039784,
-        "Gender": "Male",
-        "label": "Van Foreest, Jorden",
-        "elo": 2705,
-        "born": 1999,
-        "nationality": "Netherlands",
-        "title": "GM",
-        "rapid": 2595,
-        "blitz": 2688
-    },
-    {
         "Rank": 31,
-        "ID": 24130737,
-        "Gender": "Male",
-        "label": "Fedoseev, Vladimir",
-        "elo": 2704,
-        "born": 1995,
-        "nationality": "Slovenia",
-        "title": "GM",
-        "rapid": 2690,
-        "blitz": 2756
-    },
-    {
-        "Rank": 32,
-        "ID": 5072786,
-        "Gender": "Male",
-        "label": "Aravindh, Chithambaram VR.",
-        "elo": 2700,
-        "born": 1999,
-        "nationality": "India",
-        "title": "GM",
-        "rapid": 2582,
-        "blitz": 2565
-    },
-    {
-        "Rank": 33,
         "ID": 12521213,
         "Gender": "Male",
         "label": "Tabatabaei, M. Amin",
@@ -396,7 +372,19 @@
         "blitz": 2563
     },
     {
-        "Rank": 34,
+        "Rank": 32,
+        "ID": 24651516,
+        "Gender": "Male",
+        "label": "Bluebaum, Matthias",
+        "elo": 2698,
+        "born": 1997,
+        "nationality": "Germany",
+        "title": "GM",
+        "rapid": 2587,
+        "blitz": 2634
+    },
+    {
+        "Rank": 33,
         "ID": 24175439,
         "Gender": "Male",
         "label": "Esipenko, Andrey",
@@ -408,11 +396,23 @@
         "blitz": 2652
     },
     {
+        "Rank": 34,
+        "ID": 5072786,
+        "Gender": "Male",
+        "label": "Aravindh, Chithambaram VR.",
+        "elo": 2689,
+        "born": 1999,
+        "nationality": "India",
+        "title": "GM",
+        "rapid": 2576,
+        "blitz": 2550
+    },
+    {
         "Rank": 35,
         "ID": 13400924,
         "Gender": "Male",
         "label": "Radjabov, Teimour",
-        "elo": 2692,
+        "elo": 2689,
         "born": 1987,
         "nationality": "Azerbaijan",
         "title": "GM",
@@ -421,18 +421,6 @@
     },
     {
         "Rank": 36,
-        "ID": 14203987,
-        "Gender": "Male",
-        "label": "Yakubboev, Nodirbek",
-        "elo": 2691,
-        "born": 2002,
-        "nationality": "Uzbekistan",
-        "title": "GM",
-        "rapid": 2562,
-        "blitz": 2569
-    },
-    {
-        "Rank": 37,
         "ID": 2040506,
         "Gender": "Male",
         "label": "Sevian, Samuel",
@@ -444,7 +432,31 @@
         "blitz": 2679
     },
     {
+        "Rank": 37,
+        "ID": 44599790,
+        "Gender": "Male",
+        "label": "Erdogmus, Yagiz Kaan",
+        "elo": 2687,
+        "born": 2011,
+        "nationality": "Turkiye",
+        "title": "GM",
+        "rapid": 2493,
+        "blitz": 2546
+    },
+    {
         "Rank": 38,
+        "ID": 14203987,
+        "Gender": "Male",
+        "label": "Yakubboev, Nodirbek",
+        "elo": 2686,
+        "born": 2002,
+        "nationality": "Uzbekistan",
+        "title": "GM",
+        "rapid": 2568,
+        "blitz": 2584
+    },
+    {
+        "Rank": 39,
         "ID": 8602883,
         "Gender": "Male",
         "label": "Wang, Hao",
@@ -454,18 +466,6 @@
         "title": "GM",
         "rapid": 2667,
         "blitz": 2639
-    },
-    {
-        "Rank": 39,
-        "ID": 24651516,
-        "Gender": "Male",
-        "label": "Bluebaum, Matthias",
-        "elo": 2684,
-        "born": 1997,
-        "nationality": "Germany",
-        "title": "GM",
-        "rapid": 2587,
-        "blitz": 2634
     },
     {
         "Rank": 40,
@@ -541,42 +541,6 @@
     },
     {
         "Rank": 46,
-        "ID": 44599790,
-        "Gender": "Male",
-        "label": "Erdogmus, Yagiz Kaan",
-        "elo": 2669,
-        "born": 2011,
-        "nationality": "Turkiye",
-        "title": "GM",
-        "rapid": 2493,
-        "blitz": 2546
-    },
-    {
-        "Rank": 47,
-        "ID": 1118358,
-        "Gender": "Male",
-        "label": "Wojtaszek, Radoslaw",
-        "elo": 2669,
-        "born": 1987,
-        "nationality": "Poland",
-        "title": "GM",
-        "rapid": 2612,
-        "blitz": 2558
-    },
-    {
-        "Rank": 48,
-        "ID": 14200244,
-        "Gender": "Male",
-        "label": "Kasimdzhanov, Rustam",
-        "elo": 2668,
-        "born": 1979,
-        "nationality": "Uzbekistan",
-        "title": "GM",
-        "rapid": 2646,
-        "blitz": 2574
-    },
-    {
-        "Rank": 49,
         "ID": 410608,
         "Gender": "Male",
         "label": "Howell, David W L",
@@ -588,7 +552,19 @@
         "blitz": 2574
     },
     {
-        "Rank": 50,
+        "Rank": 47,
+        "ID": 14200244,
+        "Gender": "Male",
+        "label": "Kasimdzhanov, Rustam",
+        "elo": 2668,
+        "born": 1979,
+        "nationality": "Uzbekistan",
+        "title": "GM",
+        "rapid": 2646,
+        "blitz": 2574
+    },
+    {
+        "Rank": 48,
         "ID": 4152956,
         "Gender": "Male",
         "label": "Vitiugov, Nikita",
@@ -600,19 +576,31 @@
         "blitz": 2586
     },
     {
-        "Rank": 51,
-        "ID": 8601445,
+        "Rank": 49,
+        "ID": 1118358,
         "Gender": "Male",
-        "label": "Bu, Xiangzhi",
+        "label": "Wojtaszek, Radoslaw",
         "elo": 2666,
-        "born": 1985,
-        "nationality": "China",
+        "born": 1987,
+        "nationality": "Poland",
         "title": "GM",
-        "rapid": 2583,
-        "blitz": 2719
+        "rapid": 2612,
+        "blitz": 2558
     },
     {
-        "Rank": 52,
+        "Rank": 50,
+        "ID": 1710400,
+        "Gender": "Male",
+        "label": "Grandelius, Nils",
+        "elo": 2666,
+        "born": 1993,
+        "nationality": "Sweden",
+        "title": "GM",
+        "rapid": 2611,
+        "blitz": 2576
+    },
+    {
+        "Rank": 51,
         "ID": 2285525,
         "Gender": "Male",
         "label": "Anton Guijarro, David",
@@ -624,43 +612,43 @@
         "blitz": 2548
     },
     {
-        "Rank": 53,
-        "ID": 1710400,
+        "Rank": 52,
+        "ID": 8601445,
         "Gender": "Male",
-        "label": "Grandelius, Nils",
-        "elo": 2664,
-        "born": 1993,
-        "nationality": "Sweden",
+        "label": "Bu, Xiangzhi",
+        "elo": 2666,
+        "born": 1985,
+        "nationality": "China",
         "title": "GM",
-        "rapid": 2611,
-        "blitz": 2576
+        "rapid": 2583,
+        "blitz": 2719
+    },
+    {
+        "Rank": 53,
+        "ID": 14508150,
+        "Gender": "Male",
+        "label": "Saric, Ivan",
+        "elo": 2661,
+        "born": 1990,
+        "nationality": "Croatia",
+        "title": "GM",
+        "rapid": 2595,
+        "blitz": 2600
     },
     {
         "Rank": 54,
-        "ID": 1512668,
+        "ID": 14102951,
         "Gender": "Male",
-        "label": "Christiansen, Johan-Sebastian",
+        "label": "Eljanov, Pavel",
         "elo": 2659,
-        "born": 1998,
-        "nationality": "Norway",
+        "born": 1983,
+        "nationality": "Ukraine",
         "title": "GM",
-        "rapid": 2476,
-        "blitz": 2544
+        "rapid": 2605,
+        "blitz": 2622
     },
     {
         "Rank": 55,
-        "ID": 13306766,
-        "Gender": "Male",
-        "label": "Sargsyan, Shant",
-        "elo": 2659,
-        "born": 2002,
-        "nationality": "Armenia",
-        "title": "GM",
-        "rapid": 2616,
-        "blitz": 2575
-    },
-    {
-        "Rank": 56,
         "ID": 24125890,
         "Gender": "Male",
         "label": "Oparin, Grigoriy",
@@ -672,7 +660,31 @@
         "blitz": 2676
     },
     {
+        "Rank": 56,
+        "ID": 1512668,
+        "Gender": "Male",
+        "label": "Christiansen, Johan-Sebastian",
+        "elo": 2656,
+        "born": 1998,
+        "nationality": "Norway",
+        "title": "GM",
+        "rapid": 2476,
+        "blitz": 2544
+    },
+    {
         "Rank": 57,
+        "ID": 13306766,
+        "Gender": "Male",
+        "label": "Sargsyan, Shant",
+        "elo": 2656,
+        "born": 2002,
+        "nationality": "Armenia",
+        "title": "GM",
+        "rapid": 2616,
+        "blitz": 2575
+    },
+    {
+        "Rank": 58,
         "ID": 3805662,
         "Gender": "Male",
         "label": "Martinez Alcantara, Jose Eduardo",
@@ -682,18 +694,6 @@
         "title": "GM",
         "rapid": 2625,
         "blitz": 2663
-    },
-    {
-        "Rank": 58,
-        "ID": 358878,
-        "Gender": "Male",
-        "label": "Nguyen, Thai Dai Van",
-        "elo": 2656,
-        "born": 2001,
-        "nationality": "Republic",
-        "title": "GM",
-        "rapid": 2516,
-        "blitz": 2563
     },
     {
         "Rank": 59,
@@ -709,39 +709,39 @@
     },
     {
         "Rank": 60,
-        "ID": 24603295,
+        "ID": 1226380,
         "Gender": "Male",
-        "label": "Donchenko, Alexander",
+        "label": "Deac, Bogdan-Daniel",
         "elo": 2655,
-        "born": 1998,
-        "nationality": "Germany",
+        "born": 2001,
+        "nationality": "Romania",
         "title": "GM",
-        "rapid": 2573,
-        "blitz": 2536
+        "rapid": 2613,
+        "blitz": 2649
     },
     {
         "Rank": 61,
-        "ID": 14102951,
+        "ID": 13413937,
         "Gender": "Male",
-        "label": "Eljanov, Pavel",
-        "elo": 2655,
-        "born": 1983,
-        "nationality": "Ukraine",
+        "label": "Suleymanli, Aydin",
+        "elo": 2653,
+        "born": 2005,
+        "nationality": "Azerbaijan",
         "title": "GM",
-        "rapid": 2605,
-        "blitz": 2622
+        "rapid": 2535,
+        "blitz": 2565
     },
     {
         "Rank": 62,
-        "ID": 14508150,
+        "ID": 712779,
         "Gender": "Male",
-        "label": "Saric, Ivan",
-        "elo": 2655,
-        "born": 1990,
-        "nationality": "Croatia",
+        "label": "Gledura, Benjamin",
+        "elo": 2653,
+        "born": 1999,
+        "nationality": "Hungary",
         "title": "GM",
-        "rapid": 2595,
-        "blitz": 2600
+        "rapid": 2575,
+        "blitz": 2564
     },
     {
         "Rank": 63,
@@ -769,42 +769,18 @@
     },
     {
         "Rank": 65,
-        "ID": 712779,
+        "ID": 4135539,
         "Gender": "Male",
-        "label": "Gledura, Benjamin",
+        "label": "Alekseenko, Kirill",
         "elo": 2652,
-        "born": 1999,
-        "nationality": "Hungary",
+        "born": 1997,
+        "nationality": "Austria",
         "title": "GM",
-        "rapid": 2575,
-        "blitz": 2564
+        "rapid": 2595,
+        "blitz": 2620
     },
     {
         "Rank": 66,
-        "ID": 1226380,
-        "Gender": "Male",
-        "label": "Deac, Bogdan-Daniel",
-        "elo": 2652,
-        "born": 2001,
-        "nationality": "Romania",
-        "title": "GM",
-        "rapid": 2613,
-        "blitz": 2649
-    },
-    {
-        "Rank": 67,
-        "ID": 44155573,
-        "Gender": "Male",
-        "label": "Murzin, Volodar",
-        "elo": 2652,
-        "born": 2006,
-        "nationality": "FIDE",
-        "title": "GM",
-        "rapid": 2602,
-        "blitz": 2637
-    },
-    {
-        "Rank": 68,
         "ID": 2004887,
         "Gender": "Male",
         "label": "Shankland, Sam",
@@ -816,7 +792,19 @@
         "blitz": 2613
     },
     {
-        "Rank": 69,
+        "Rank": 67,
+        "ID": 44155573,
+        "Gender": "Male",
+        "label": "Murzin, Volodar",
+        "elo": 2650,
+        "born": 2006,
+        "nationality": "FIDE",
+        "title": "GM",
+        "rapid": 2602,
+        "blitz": 2637
+    },
+    {
+        "Rank": 68,
         "ID": 2023970,
         "Gender": "Male",
         "label": "Robson, Ray",
@@ -828,19 +816,19 @@
         "blitz": 2621
     },
     {
-        "Rank": 70,
-        "ID": 4135539,
+        "Rank": 69,
+        "ID": 13402129,
         "Gender": "Male",
-        "label": "Alekseenko, Kirill",
+        "label": "Safarli, Eltaj",
         "elo": 2648,
-        "born": 1997,
-        "nationality": "Austria",
+        "born": 1992,
+        "nationality": "Azerbaijan",
         "title": "GM",
-        "rapid": 2595,
-        "blitz": 2620
+        "rapid": 2614,
+        "blitz": 2619
     },
     {
-        "Rank": 71,
+        "Rank": 70,
         "ID": 5074452,
         "Gender": "Male",
         "label": "Karthikeyan, Murali",
@@ -850,6 +838,18 @@
         "title": "GM",
         "rapid": 2522,
         "blitz": 2521
+    },
+    {
+        "Rank": 71,
+        "ID": 4126025,
+        "Gender": "Male",
+        "label": "Grischuk, Alexander",
+        "elo": 2645,
+        "born": 1983,
+        "nationality": "Russia",
+        "title": "GM",
+        "rapid": 2673,
+        "blitz": 2678
     },
     {
         "Rank": 72,
@@ -865,66 +865,6 @@
     },
     {
         "Rank": 73,
-        "ID": 4126025,
-        "Gender": "Male",
-        "label": "Grischuk, Alexander",
-        "elo": 2645,
-        "born": 1983,
-        "nationality": "Russia",
-        "title": "GM",
-        "rapid": 2673,
-        "blitz": 2678
-    },
-    {
-        "Rank": 74,
-        "ID": 44507356,
-        "Gender": "Male",
-        "label": "Gurel, Ediz",
-        "elo": 2645,
-        "born": 2008,
-        "nationality": "Turkiye",
-        "title": "GM",
-        "rapid": 2538,
-        "blitz": 2559
-    },
-    {
-        "Rank": 75,
-        "ID": 13401653,
-        "Gender": "Male",
-        "label": "Mamedov, Rauf",
-        "elo": 2645,
-        "born": 1988,
-        "nationality": "Azerbaijan",
-        "title": "GM",
-        "rapid": 2609,
-        "blitz": 2647
-    },
-    {
-        "Rank": 76,
-        "ID": 409561,
-        "Gender": "Male",
-        "label": "Maroroa Jones, Gawain C B",
-        "elo": 2645,
-        "born": 1987,
-        "nationality": "England",
-        "title": "GM",
-        "rapid": 2608,
-        "blitz": 2642
-    },
-    {
-        "Rank": 77,
-        "ID": 13402129,
-        "Gender": "Male",
-        "label": "Safarli, Eltaj",
-        "elo": 2644,
-        "born": 1992,
-        "nationality": "Azerbaijan",
-        "title": "GM",
-        "rapid": 2626,
-        "blitz": 2619
-    },
-    {
-        "Rank": 78,
         "ID": 2205530,
         "Gender": "Male",
         "label": "Vallejo Pons, Francisco",
@@ -936,31 +876,19 @@
         "blitz": 2584
     },
     {
-        "Rank": 79,
-        "ID": 14204223,
+        "Rank": 74,
+        "ID": 24603295,
         "Gender": "Male",
-        "label": "Vokhidov, Shamsiddin",
-        "elo": 2644,
-        "born": 2002,
-        "nationality": "Uzbekistan",
+        "label": "Donchenko, Alexander",
+        "elo": 2643,
+        "born": 1998,
+        "nationality": "Germany",
         "title": "GM",
-        "rapid": 2527,
-        "blitz": 2550
+        "rapid": 2573,
+        "blitz": 2536
     },
     {
-        "Rank": 80,
-        "ID": 1510045,
-        "Gender": "Male",
-        "label": "Tari, Aryan",
-        "elo": 2642,
-        "born": 1999,
-        "nationality": "Norway",
-        "title": "GM",
-        "rapid": 2550,
-        "blitz": 2607
-    },
-    {
-        "Rank": 81,
+        "Rank": 75,
         "ID": 8603332,
         "Gender": "Male",
         "label": "Lu, Shanglei",
@@ -972,7 +900,31 @@
         "blitz": 2688
     },
     {
-        "Rank": 82,
+        "Rank": 76,
+        "ID": 1510045,
+        "Gender": "Male",
+        "label": "Tari, Aryan",
+        "elo": 2642,
+        "born": 1999,
+        "nationality": "Norway",
+        "title": "GM",
+        "rapid": 2550,
+        "blitz": 2607
+    },
+    {
+        "Rank": 77,
+        "ID": 35093487,
+        "Gender": "Male",
+        "label": "Sadhwani, Raunak",
+        "elo": 2641,
+        "born": 2005,
+        "nationality": "India",
+        "title": "GM",
+        "rapid": 2576,
+        "blitz": 2648
+    },
+    {
+        "Rank": 78,
         "ID": 24101605,
         "Gender": "Male",
         "label": "Artemiev, Vladislav",
@@ -984,7 +936,7 @@
         "blitz": 2732
     },
     {
-        "Rank": 83,
+        "Rank": 79,
         "ID": 25060783,
         "Gender": "Male",
         "label": "Pranav, V",
@@ -996,7 +948,31 @@
         "blitz": 2611
     },
     {
-        "Rank": 84,
+        "Rank": 80,
+        "ID": 9301348,
+        "Gender": "Male",
+        "label": "Salem, A.R. Saleh",
+        "elo": 2640,
+        "born": 1993,
+        "nationality": "Emirates",
+        "title": "GM",
+        "rapid": 2597,
+        "blitz": 2643
+    },
+    {
+        "Rank": 81,
+        "ID": 14204223,
+        "Gender": "Male",
+        "label": "Vokhidov, Shamsiddin",
+        "elo": 2639,
+        "born": 2002,
+        "nationality": "Uzbekistan",
+        "title": "GM",
+        "rapid": 2527,
+        "blitz": 2550
+    },
+    {
+        "Rank": 82,
         "ID": 4262875,
         "Gender": "Male",
         "label": "Theodorou, Nikolas",
@@ -1008,35 +984,11 @@
         "blitz": 2555
     },
     {
-        "Rank": 85,
-        "ID": 35093487,
-        "Gender": "Male",
-        "label": "Sadhwani, Raunak",
-        "elo": 2638,
-        "born": 2005,
-        "nationality": "India",
-        "title": "GM",
-        "rapid": 2576,
-        "blitz": 2648
-    },
-    {
-        "Rank": 86,
-        "ID": 9301348,
-        "Gender": "Male",
-        "label": "Salem, A.R. Saleh",
-        "elo": 2635,
-        "born": 1993,
-        "nationality": "Emirates",
-        "title": "GM",
-        "rapid": 2597,
-        "blitz": 2648
-    },
-    {
-        "Rank": 87,
+        "Rank": 83,
         "ID": 4108116,
         "Gender": "Male",
         "label": "Chigaev, Maksim",
-        "elo": 2634,
+        "elo": 2637,
         "born": 1996,
         "nationality": "Spain",
         "title": "GM",
@@ -1044,19 +996,103 @@
         "blitz": 2514
     },
     {
-        "Rank": 88,
-        "ID": 1007998,
+        "Rank": 84,
+        "ID": 13401653,
         "Gender": "Male",
-        "label": "L'Ami, Erwin",
-        "elo": 2632,
-        "born": 1985,
-        "nationality": "Netherlands",
+        "label": "Mamedov, Rauf",
+        "elo": 2636,
+        "born": 1988,
+        "nationality": "Azerbaijan",
         "title": "GM",
-        "rapid": 2642,
-        "blitz": 2675
+        "rapid": 2594,
+        "blitz": 2647
+    },
+    {
+        "Rank": 85,
+        "ID": 409561,
+        "Gender": "Male",
+        "label": "Maroroa Jones, Gawain C B",
+        "elo": 2635,
+        "born": 1987,
+        "nationality": "England",
+        "title": "GM",
+        "rapid": 2608,
+        "blitz": 2642
+    },
+    {
+        "Rank": 86,
+        "ID": 2805677,
+        "Gender": "Male",
+        "label": "Gelfand, Boris",
+        "elo": 2635,
+        "born": 1968,
+        "nationality": "Israel",
+        "title": "GM",
+        "rapid": 2625,
+        "blitz": 2580
+    },
+    {
+        "Rank": 87,
+        "ID": 44507356,
+        "Gender": "Male",
+        "label": "Gurel, Ediz",
+        "elo": 2635,
+        "born": 2008,
+        "nationality": "Turkiye",
+        "title": "GM",
+        "rapid": 2538,
+        "blitz": 2559
+    },
+    {
+        "Rank": 88,
+        "ID": 358878,
+        "Gender": "Male",
+        "label": "Nguyen, Thai Dai Van",
+        "elo": 2634,
+        "born": 2001,
+        "nationality": "Republic",
+        "title": "GM",
+        "rapid": 2516,
+        "blitz": 2563
     },
     {
         "Rank": 89,
+        "ID": 35028600,
+        "Gender": "Male",
+        "label": "Pranesh M",
+        "elo": 2633,
+        "born": 2006,
+        "nationality": "India",
+        "title": "GM",
+        "rapid": 2521,
+        "blitz": 2587
+    },
+    {
+        "Rank": 90,
+        "ID": 30953499,
+        "Gender": "Male",
+        "label": "Woodward, Andy",
+        "elo": 2631,
+        "born": 2010,
+        "nationality": "America",
+        "title": "GM",
+        "rapid": 2521,
+        "blitz": 2461
+    },
+    {
+        "Rank": 91,
+        "ID": 605506,
+        "Gender": "Male",
+        "label": "Bacrot, Etienne",
+        "elo": 2631,
+        "born": 1983,
+        "nationality": "France",
+        "title": "GM",
+        "rapid": 2636,
+        "blitz": 2590
+    },
+    {
+        "Rank": 92,
         "ID": 5084423,
         "Gender": "Male",
         "label": "Aryan Chopra",
@@ -1068,7 +1104,7 @@
         "blitz": 2620
     },
     {
-        "Rank": 90,
+        "Rank": 93,
         "ID": 14103320,
         "Gender": "Male",
         "label": "Ponomariov, Ruslan",
@@ -1080,7 +1116,7 @@
         "blitz": 2610
     },
     {
-        "Rank": 91,
+        "Rank": 94,
         "ID": 400041,
         "Gender": "Male",
         "label": "Adams, Michael",
@@ -1092,55 +1128,7 @@
         "blitz": 2695
     },
     {
-        "Rank": 92,
-        "ID": 605506,
-        "Gender": "Male",
-        "label": "Bacrot, Etienne",
-        "elo": 2629,
-        "born": 1983,
-        "nationality": "France",
-        "title": "GM",
-        "rapid": 2636,
-        "blitz": 2590
-    },
-    {
-        "Rank": 93,
-        "ID": 1444948,
-        "Gender": "Male",
-        "label": "Bjerre, Jonas Buhl",
-        "elo": 2629,
-        "born": 2004,
-        "nationality": "Denmark",
-        "title": "GM",
-        "rapid": 2580,
-        "blitz": 2494
-    },
-    {
-        "Rank": 94,
-        "ID": 1000268,
-        "Gender": "Male",
-        "label": "Van Wely, Loek",
-        "elo": 2629,
-        "born": 1972,
-        "nationality": "Netherlands",
-        "title": "GM",
-        "rapid": 2552,
-        "blitz": 2534
-    },
-    {
         "Rank": 95,
-        "ID": 2805677,
-        "Gender": "Male",
-        "label": "Gelfand, Boris",
-        "elo": 2629,
-        "born": 1968,
-        "nationality": "Israel",
-        "title": "GM",
-        "rapid": 2625,
-        "blitz": 2580
-    },
-    {
-        "Rank": 96,
         "ID": 30920019,
         "Gender": "Male",
         "label": "Mishra, Abhimanyu",
@@ -1152,23 +1140,35 @@
         "blitz": 2508
     },
     {
-        "Rank": 97,
-        "ID": 309095,
+        "Rank": 96,
+        "ID": 1000268,
         "Gender": "Male",
-        "label": "Navara, David",
-        "elo": 2628,
-        "born": 1985,
-        "nationality": "Republic",
+        "label": "Van Wely, Loek",
+        "elo": 2629,
+        "born": 1972,
+        "nationality": "Netherlands",
         "title": "GM",
-        "rapid": 2602,
-        "blitz": 2618
+        "rapid": 2552,
+        "blitz": 2534
+    },
+    {
+        "Rank": 97,
+        "ID": 13306677,
+        "Gender": "Male",
+        "label": "Hakobyan, Aram",
+        "elo": 2627,
+        "born": 2001,
+        "nationality": "Armenia",
+        "title": "GM",
+        "rapid": 2542,
+        "blitz": 2583
     },
     {
         "Rank": 98,
         "ID": 14107090,
         "Gender": "Male",
         "label": "Volokitin, Andrei",
-        "elo": 2628,
+        "elo": 2627,
         "born": 1986,
         "nationality": "Ukraine",
         "title": "GM",
@@ -1177,26 +1177,26 @@
     },
     {
         "Rank": 99,
-        "ID": 13413937,
+        "ID": 2905540,
         "Gender": "Male",
-        "label": "Suleymanli, Aydin",
-        "elo": 2628,
-        "born": 2005,
-        "nationality": "Azerbaijan",
+        "label": "Cheparinov, Ivan",
+        "elo": 2627,
+        "born": 1986,
+        "nationality": "Bulgaria",
         "title": "GM",
-        "rapid": 2524,
-        "blitz": 2565
+        "rapid": 2615,
+        "blitz": 2575
     },
     {
         "Rank": 100,
-        "ID": 35028600,
+        "ID": 309095,
         "Gender": "Male",
-        "label": "Pranesh M",
-        "elo": 2627,
-        "born": 2006,
-        "nationality": "India",
+        "label": "Navara, David",
+        "elo": 2626,
+        "born": 1985,
+        "nationality": "Republic",
         "title": "GM",
-        "rapid": 2521,
-        "blitz": 2587
+        "rapid": 2602,
+        "blitz": 2618
     }
 ]
